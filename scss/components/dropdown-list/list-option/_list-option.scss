@@ -1,6 +1,7 @@
 @import "settings";
+@import "skins/default";
 
-@include placeholder(dropdown-list-option){
+@include placeholder(list-option){
 
 	// placeholers for the list options
 	%dropdown-list-option-base{
@@ -14,49 +15,46 @@
 		position: relative;
 		display: block;
 	}
-
-	%dropdown-list-option-style-default{
-		background: $list-option-bg;
-		color: $list-option-color;
-	}	
-}
-
-@include placeholder(dropdown-list-option-hover){
-
-	%dropdown-list-option-hover-style-default{
-		background: $list-option-bg-hover;
-		color: $list-option-color-hover;
-	}	
+	
+	%drop-icon-base{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: $list-option-padding;
+		content: " ";
+		width: 0;
+		height: 0;			
+	}
 }
 
 
-// list option helpers
-@mixin dropdown-list-option($size, $style: default){
 
-	@extend %dropdown-list-option;
+// helper for creating a dropdown list option
+@mixin list-option($size, $skin: default){
+
+	font-size: field-size($size) / 2;
+
+	@extend %list-option;
+	@extend %list-option-#{$skin}-skin;
+	@extend %list-option-hover-#{$skin}-skin;
+	@extend %list-option-drop-icon-#{$skin}-skin;
 
 	li{
 		@extend %dropdown-list-option-base;
+		@extend %list-option-style-#{$skin};
 
 		&:first-child{
 			@extend %dropdown-list-option-show;
 
 			&:after{
-				position: absolute;
-				top: 50%;
-  				transform: translateY(-50%);
-	  			right: $list-option-padding;
-				content: " ";
-				width: 0;
-				height: 0;
-				border-style: solid;
+				@extend %drop-icon-base;
+				@extend %list-option-drop-icon-style-#{$skin};
 				border-width: (field-size($size) / 5) (field-size($size) / 6) 0 (field-size($size) / 6);
-				border-color: $drop-icon-bg transparent transparent transparent;			
 			}			
 		}		
 
 		&:hover{
-			@include dropdown-list-option-hover;
+			@extend %hover-style-#{$skin};
 		}
 	}
 
@@ -67,21 +65,4 @@
 			display: none;
 		}
 	}
-
-	@if $style == default {
-		@extend %dropdown-list-option-style-default;
-	}
-	
-	font-size: field-size($size) / 2;
 }
-
-
-@mixin dropdown-list-option-hover($style: default){
-	
-	@extend %dropdown-list-option-hover;
-
-	@if $style == default {
-		@extend %dropdown-list-option-hover-style-default;
-	}
-}
-

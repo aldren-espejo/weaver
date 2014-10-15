@@ -70,6 +70,6 @@
     });
   }
 
-  $('[data-role="dropdown-list"]').dropdownList();
+  $('[role="dropdown-list"]').dropdownList();
 
 }( jQuery, window, document ));

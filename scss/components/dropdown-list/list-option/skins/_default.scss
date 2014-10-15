@@ -1,0 +1,24 @@
+@import "../settings";
+
+@include placeholder(list-option-default-skin){
+	%list-option-style-default{
+		background: $list-option-bg;
+		color: $list-option-color;
+	}	
+}
+
+
+@include placeholder(list-option-hover-default-skin){
+
+	%hover-style-default{
+		background: $list-option-bg-hover;
+		color: $list-option-color-hover;
+	}	
+}
+
+@include placeholder(list-option-drop-icon-default-skin){
+	%list-option-drop-icon-style-default{
+		border-style: solid;
+		border-color: $drop-icon-bg transparent transparent transparent;		
+	}	
+}
