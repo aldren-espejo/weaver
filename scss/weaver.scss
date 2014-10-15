@@ -1,12 +1,15 @@
 @import "sass-list-maps";
-@import "global-vars";
+@import "defaults";
+
 @import "utilities/functions/rem";
 @import "utilities/functions/range";
 @import "utilities/functions/field-size";
 @import "utilities/helpers/placeholder";
+@import "utilities/extendables/field";
 
-@import "defaults";
+@import "global-vars";
 @import "components/dropdown-list/dropdown-list";
 @import "components/grid/grid";
+@import "components/inputbox/inputbox";
 
 @import "docs/dropdown-list";

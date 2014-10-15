@@ -1,0 +1,42 @@
+@import "../../global-vars";
+
+@include placeholder(e_padding-xsmall){
+	padding: $field-padding-xsmall;
+}
+
+@include placeholder(e_padding-small){
+	padding: $field-padding-small;
+}
+
+@include placeholder(e_padding-medium){
+	padding: $field-padding-medium;
+}
+
+@include placeholder(e_padding-large){
+	padding: $field-padding-large;
+}
+
+@include placeholder(e_padding-xlarge){
+	padding: $field-padding-xlarge;
+}
+
+
+@include placeholder(e_text-xsmall){
+	font-size: $field-text-xsmall;
+}
+
+@include placeholder(e_text-small){
+	font-size: $field-text-small;
+}
+
+@include placeholder(e_text-medium){
+	font-size: $field-text-medium;
+}
+
+@include placeholder(e_text-large){
+	font-size: $field-text-large;
+}
+
+@include placeholder(e_text-xlarge){
+	font-size: $field-text-xlarge;
+}

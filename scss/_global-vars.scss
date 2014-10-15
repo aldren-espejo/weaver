@@ -1,12 +1,19 @@
 // the basis of all rem values
 $base-rem: 14px;
 
-// variables that control form field base sizes
-$field-xsmall: 22px;
-$field-small: 25px;
-$field-medium: 30px;
-$field-large: 35px;
-$field-xlarge: 40px;
+// variables that control form field padding
+$field-padding-xsmall: rem-calc(8 12);
+$field-padding-small: rem-calc(9 13);
+$field-padding-medium: rem-calc(10 14);
+$field-padding-large: rem-calc(12 16);
+$field-padding-xlarge: rem-calc(14 20);
+
+// variables that control text sizes
+$field-text-xsmall: rem-calc(10);
+$field-text-small: rem-calc(14);
+$field-text-medium: rem-calc(16);
+$field-text-large: rem-calc(18);
+$field-text-xlarge: rem-calc(20);
 
 // media breakpoints mapping
 $small-range: ('0em', '40em') !default;

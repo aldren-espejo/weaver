@@ -1,66 +1,51 @@
 @import "settings";
 @import "skins/default";
 
-@include placeholder(list-option){
-
-	// placeholers for the list options
-	%dropdown-list-option-base{
-		display: none;
-		padding: $list-option-padding;
-		padding-right: $list-option-padding + 20;
-		cursor: pointer;
-	}
-
-	%dropdown-list-option-show{
-		position: relative;
-		display: block;
-	}
-	
-	%drop-icon-base{
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: $list-option-padding;
-		content: " ";
-		width: 0;
-		height: 0;			
-	}
+@include placeholder(dropdown-list-option-base){
+	display: none;
+	padding-right: 30;
+	cursor: pointer;
 }
 
+@include placeholder(dropdown-list-option-show){
+	position: relative;
+	display: block;	
+}
+
+@include placeholder(drop-icon-base){
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	content: " ";	
+}
 
 
 // helper for creating a dropdown list option
 @mixin list-option($size, $skin: default){
 
-	font-size: field-size($size) / 2;
-
-	@extend %list-option;
-	@extend %list-option-#{$skin}-skin;
-	@extend %list-option-active-#{$skin}-skin;
-	@extend %list-option-hover-#{$skin}-skin;
-	@extend %list-option-drop-icon-#{$skin}-skin;
-
 	li{
 		@extend %dropdown-list-option-base;
-		@extend %list-option-style-#{$skin};
+		@extend %list-option-#{$skin}-skin;
+		@extend %e_padding-#{$size};
+		@extend %e_text-#{$size};
 
 		&:first-child{
 			@extend %dropdown-list-option-show;
 
 			&:after{
 				@extend %drop-icon-base;
-				@extend %list-option-drop-icon-style-#{$skin};
-				border-width: (field-size($size) / 5) (field-size($size) / 6) 0 (field-size($size) / 6);
+				@extend %drop-icon-#{$skin}-skin;
+				@extend %drop-icon-#{$skin}-#{$size};
 			}			
 		}		
 
 		&:hover{
-			@extend %list-option-hover-style-#{$skin};
+			@extend %list-option-hover-#{$skin}-skin;
 		}
 	}
 
 	.expanded li{
-		@extend %list-option-active-style-#{$skin};
+		@extend %list-option-active-#{$skin}-skin;
 		display: block;
 
 		&:first-child:after{

@@ -2,19 +2,16 @@
 @import "skins/default";
 @import "list-option/list-option";
 
-@include placeholder(dropdown-list){
+@include placeholder(dropdown-list-expanded){
+	z-index: 4;
+}
 
-	%dropdown-list-base{
-		list-style-type: none;
-		overflow: hidden;
-		width: 100%;
-		position: absolute;
-		z-index: 3;
-	}
-
-	%dropdown-list-expanded{
-		z-index: 4;
-	}	
+@include placeholder(dropdown-list-base){
+	list-style-type: none;
+	overflow: hidden;
+	width: 100%;
+	position: absolute;
+	z-index: 3;	
 }
 
 
@@ -22,19 +19,14 @@
 @mixin dropdown-list($size: xsmall, $skin: default, $float: left){
 
 	position: relative;
-	
-	// preload placeholders to be used
-	@extend %dropdown-list;
-	@extend %dropdown-list-#{$skin}-skin;
-	@extend %dropdown-list-expanded-#{$skin}-skin;
 
 	.select{
 		@extend %dropdown-list-base;
-		@extend %dropdown-list-style-#{$skin};		
+		@extend %dropdown-list-#{$skin}-skin;;		
 
 		&.expanded{
 			@extend %dropdown-list-expanded;
-			@extend %dropdown-list-expanded-style-#{$skin};			
+			@extend %dropdown-list-expanded-#{$skin}-skin;			
 		}
 	}
 
