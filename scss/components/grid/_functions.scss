@@ -1,0 +1,9 @@
+// Function to calculate the grid width
+@function grid-calc($colNumber, $totalColumns) {
+  @return percentage(($colNumber / $totalColumns));
+}
+
+@function set($val){
+	$active-breakpoint: $val;
+	@return $active-breakpoint;
+}

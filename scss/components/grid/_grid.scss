@@ -1,0 +1,67 @@
+@import "settings";
+@import "functions";
+
+// create the grid placeholders in each breakponits
+@each $breakpoint in $breakpoints {
+	$name : map-keys($breakpoint);
+	$value : map-values($breakpoint);
+
+	@media #{$value} {
+		@for $i from 1 through 12{
+
+			%grid-#{$i}-columns-#{$name}{
+				width: grid-calc($i, $total-columns);
+				float: left;
+
+				@if $with-default-gutters == true{
+					padding: $default-gutters;
+				}
+			}
+
+			%grid-#{$i}-columns-#{$name}-with-gutters{
+				width: grid-calc($i, $total-columns);
+				float: left;
+				padding: $default-gutters;
+			}
+		}
+	}
+}
+
+
+// grid helpres
+@mixin grid-sml($columns, $padding: null, $clearfix: null, $centered: false){
+	@include grid($columns, $padding, sml, $clearfix, $centered);
+}
+
+@mixin grid-med($columns, $padding: null, $clearfix: null, $centered: false){
+	@include grid($columns, $padding, med, $clearfix, $centered);
+}
+
+@mixin grid-lrg($columns, $padding: null, $clearfix: null, $centered: false){
+	@include grid($columns, $padding, lrg, $clearfix, $centered);
+}
+
+
+@mixin grid($columns, $padding, $breakpoint, $clearfix, $centered){
+	$with: null;
+
+	@if $padding {
+		@if $padding == default {
+			@if $with-default-gutters == false {
+				$with: "-with-gutters";
+			}
+		} @else {
+			padding: rem-calc($padding);
+		}
+	}
+
+	@if $clearfix == true {
+		@include clearfix;
+	}
+
+	@extend %grid-#{$columns}-columns-#{$breakpoint}#{$with};
+
+	@if $centered == true {
+		@extend %centered-#{$breakpoint};
+	}
+}

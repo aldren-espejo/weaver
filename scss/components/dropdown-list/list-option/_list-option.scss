@@ -1,0 +1,87 @@
+@import "settings";
+
+@include placeholder(dropdown-list-option){
+
+	// placeholers for the list options
+	%dropdown-list-option-base{
+		display: none;
+		padding: $list-option-padding;
+		padding-right: $list-option-padding + 20;
+		cursor: pointer;
+	}
+
+	%dropdown-list-option-show{
+		position: relative;
+		display: block;
+	}
+
+	%dropdown-list-option-style-default{
+		background: $list-option-bg;
+		color: $list-option-color;
+	}	
+}
+
+@include placeholder(dropdown-list-option-hover){
+
+	%dropdown-list-option-hover-style-default{
+		background: $list-option-bg-hover;
+		color: $list-option-color-hover;
+	}	
+}
+
+
+// list option helpers
+@mixin dropdown-list-option($size, $style: default){
+
+	@extend %dropdown-list-option;
+
+	li{
+		@extend %dropdown-list-option-base;
+
+		&:first-child{
+			@extend %dropdown-list-option-show;
+
+			&:after{
+				position: absolute;
+				top: 50%;
+  				transform: translateY(-50%);
+	  			right: $list-option-padding;
+				content: " ";
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: (field-size($size) / 5) (field-size($size) / 6) 0 (field-size($size) / 6);
+				border-color: $drop-icon-bg transparent transparent transparent;			
+			}			
+		}		
+
+		&:hover{
+			@include dropdown-list-option-hover;
+		}
+	}
+
+	.expanded li{
+		display: block;
+
+		&:first-child:after{
+			display: none;
+		}
+	}
+
+	@if $style == default {
+		@extend %dropdown-list-option-style-default;
+	}
+	
+	font-size: field-size($size) / 2;
+}
+
+
+@mixin dropdown-list-option-hover($style: default){
+	
+	@extend %dropdown-list-option-hover;
+
+	@if $style == default {
+		@extend %dropdown-list-option-hover-style-default;
+	}
+}
+

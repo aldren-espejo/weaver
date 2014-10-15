@@ -1,0 +1,40 @@
+// Set box-sizing globally to handle padding and border widths
+*,
+*:before,
+*:after {
+  	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*{
+	padding: 0;
+ 	margin: 0;
+}
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+  color: #444;
+  ;
+}
+
+html, body { 
+	height: 100%; 
+	font-size: $base-rem;
+}

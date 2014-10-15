@@ -1,0 +1,9 @@
+.drpdwn-venues{
+	@include grid-sml(1);
+	@include dropdown-list(small);
+}
+
+.drpdwn-areas{
+	@include grid-sml(1);
+	@include dropdown-list(small);
+}

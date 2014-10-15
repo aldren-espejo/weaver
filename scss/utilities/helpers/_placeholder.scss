@@ -1,0 +1,14 @@
+@mixin placeholder($placeholderName){
+
+    %#{$placeholderName}{
+      @content;
+    }
+    
+    @each $breakpoint in $breakpoints{
+      @media #{map-values($breakpoint)}{
+        %#{$placeholderName}-#{map-keys($breakpoint)}{
+          @content;
+        }
+      }
+    }
+}

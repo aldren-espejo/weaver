@@ -1,0 +1,8 @@
+{
+  "name": "weaver-sass-based-framework",
+  "dependencies": {
+    "sass-list-maps": "~1.0.0",
+    "normalize.css": "~3.0.2",
+    "jquery": "~2.1.1"
+  }
+}
