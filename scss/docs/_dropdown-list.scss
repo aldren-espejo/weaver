@@ -1,9 +1,24 @@
-.drpdwn-venues{
+.drpdwn-sample1{
+	@include grid-sml(1);
+	@include dropdown-list(xsmall);
+}
+
+.drpdwn-sample2{
 	@include grid-sml(1);
 	@include dropdown-list(small);
 }
 
-.drpdwn-areas{
+.drpdwn-sample3{
 	@include grid-sml(1);
-	@include dropdown-list(small);
+	@include dropdown-list(medium);
+}
+
+.drpdwn-sample4{
+	@include grid-sml(1);
+	@include dropdown-list(large);
+}
+
+.drpdwn-sample5{
+	@include grid-sml(2);
+	@include dropdown-list(xlarge);
 }
