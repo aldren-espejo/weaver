@@ -36,6 +36,7 @@
 
 	@extend %list-option;
 	@extend %list-option-#{$skin}-skin;
+	@extend %list-option-active-#{$skin}-skin;
 	@extend %list-option-hover-#{$skin}-skin;
 	@extend %list-option-drop-icon-#{$skin}-skin;
 
@@ -54,11 +55,12 @@
 		}		
 
 		&:hover{
-			@extend %hover-style-#{$skin};
+			@extend %list-option-hover-style-#{$skin};
 		}
 	}
 
 	.expanded li{
+		@extend %list-option-active-style-#{$skin};
 		display: block;
 
 		&:first-child:after{

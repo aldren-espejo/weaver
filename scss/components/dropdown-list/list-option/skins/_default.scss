@@ -7,10 +7,17 @@
 	}	
 }
 
+@include placeholder(list-option-active-default-skin){
+
+	%list-option-active-style-default{
+		background: $list-option-bg-active;
+		color: $list-option-color-active;
+	}	
+}
 
 @include placeholder(list-option-hover-default-skin){
 
-	%hover-style-default{
+	%list-option-hover-style-default{
 		background: $list-option-bg-hover;
 		color: $list-option-color-hover;
 	}	
