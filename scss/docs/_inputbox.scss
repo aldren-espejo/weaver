@@ -1,0 +1,19 @@
+.sample1{
+	@include input(xsmall);
+}
+
+.sample2{
+	@include input(small);
+}
+
+.sample3{
+	@include input(medium);
+}
+
+.sample4{
+	@include input(large);
+}
+
+.sample5{
+	@include input(xlarge);
+}
