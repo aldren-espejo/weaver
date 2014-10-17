@@ -6,6 +6,7 @@
 @import "utilities/functions/range";
 @import "utilities/helpers/placeholder";
 @import "utilities/helpers/clearfix";
+@import "utilities/helpers/filter";
 @import "utilities/extendables/field";
 @import "utilities/extendables/display";
 @import "utilities/extendables/position";
@@ -35,3 +36,4 @@
 @import "lowdown/partials/lst-venues-no-thumb";
 @import "lowdown/partials/filters";
 @import "lowdown/partials/venue-profile";
+@import "lowdown/partials/results-grid-view";
