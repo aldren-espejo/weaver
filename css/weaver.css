@@ -1,0 +1,975 @@
+*, *:before, *:after {
+  webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  color: #444; }
+
+html, body {
+  height: 100%;
+  font-size: 14px; }
+
+img {
+  max-width: 100%; }
+
+@font-face {
+  font-family: 'proxima_nova_regular';
+  src: url('../fonts/proxima-nova/proximanova-regular-webfont.eot');
+  src: url('../fonts/proxima-nova/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima-nova/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proxima-nova/proximanova-regular-webfont.ttf') format('truetype'), url('../fonts/proxima-nova/proximanova-regular-webfont.svg#mrs_sheppardsregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_semi_bold';
+  src: url('../fonts/proxima-nova/proximanova-semibold-webfont.eot');
+  src: url('../fonts/proxima-nova/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima-nova/proximanova-semibold-webfont.woff') format('woff'), url('../fonts/proxima-nova/proximanova-semibold-webfont.ttf') format('truetype'), url('../fonts/proxima-nova/proximanova-semibold-webfont.svg#mrs_sheppardsregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+.drpdwn-sample1 li, .sample1 input, .btn-sample1 {
+  padding: 0.5714285714rem 0.8571428571rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li, [role="inputbox"] input, button, [class^="btn-"], [class*=" btn-"], .drpdwn-sample2 li, .sample2 input, .btn-sample2 {
+  padding: 0.6428571429rem 0.9285714286rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.drpdwn-sample3 li, .sample3 input, .btn-sample3 {
+  padding: 0.7142857143rem 1rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.drpdwn-sample5 li, .sample4 input, .btn-sample4 {
+  padding: 0.8571428571rem 1.1428571429rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.drpdwn-sample5 li, .sample5 input, .btn-sample5 {
+  padding: 1rem 1.4285714286rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.drpdwn-sample1 li, .sample1 input, .btn-sample1 {
+  font-size: 0.7142857143rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li, [role="inputbox"] input, button, [class^="btn-"], [class*=" btn-"], .drpdwn-sample2 li, .sample2 input, .btn-sample2 {
+  font-size: 1rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.drpdwn-sample3 li, .sample3 input, .btn-sample3 {
+  font-size: 1.1428571429rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.drpdwn-sample5 li, .sample4 input, .btn-sample4 {
+  font-size: 1.2857142857rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.drpdwn-sample5 li, .sample5 input, .btn-sample5 {
+  font-size: 1.4285714286rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-main-options .options .thumb, .b-lst-venues-no-thumb a, .b-lst-venues-with-thumb ul a {
+  display: block; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+button, [class^="btn-"], [class*=" btn-"], .b-venue-profile .more-info-title {
+  display: inline-block; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-wrapper .logo, .b-main-banner .main-banner-intro, .b-main-options .options h3, .b-results-map-view .map, .b-lst-venues-no-thumb, .b-filters, .b-venue-profile, .b-lst-venues-with-thumb .venue-info {
+  position: absolute; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-main-banner, .b-main-options .options .thumb, .b-results-map-view .top-bar, .b-lst-venues-with-thumb ul a {
+  position: relative; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-main-options .options h3 {
+  top: 50%;
+  transform: translateY(-50%); }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+button, [class^="btn-"], [class*=" btn-"], .b-main-banner h1, .b-main-banner h2, .b-main-options h2, .b-main-options .options li, .b-no-results-content {
+  text-align: center; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-venue-profile .basic-info .area {
+  text-align: right; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-main-banner h1, .b-lst-venues-no-thumb span, .b-venue-profile .basic-info .area, .b-venue-profile .more-info-title, .b-lst-venues-with-thumb .venue-info span {
+  text-transform: uppercase; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-main-banner .main-banner-intro, .b-main-options .options h3 {
+  color: #fff; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-main-options .options, .b-lst-venues-no-thumb ul, .b-venue-profile .contact-options, .b-venue-profile .lst-opening-hours, .b-lst-venues-with-thumb ul {
+  list-style-type: none; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-main-banner .b-search {
+  margin: 0 auto;
+  float: none !important; }
+
+@media only screen {
+  .b-main-options .options {
+    margin: 0 auto;
+    float: none !important; } }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h1, .b-main-options h2 {
+  font-size: 3.4285714286rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h2, .b-main-options .options h3, .b-no-results-content .empty-text h1 {
+  font-size: 2.5714285714rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h3, .b-main-banner h2, .b-lst-venues-no-thumb h2, .b-venue-profile .basic-info h1, .b-lst-venues-with-thumb .venue-info h2, .b-no-results-content .empty-text p {
+  font-size: 1.2857142857rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h4, .b-venue-profile .basic-info .title-address span, .b-venue-profile .venue-desc, .b-venue-profile .more-info-title {
+  font-size: 1rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h5, h6, .b-lst-venues-no-thumb span, .b-venue-profile .basic-info .area, .b-venue-profile .lst-opening-hours .sched, .b-lst-venues-with-thumb .venue-info span {
+  font-size: 0.7857142857rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+a, p, .b-lst-venues-no-thumb h2 {
+  font-family: "proxima_nova_regular"; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h1, h2, h3, h4, h5, h6, .b-lst-venues-no-thumb span, .b-venue-profile .basic-info .area, .b-venue-profile .more-info-title, .b-venue-profile .lst-opening-hours .sched span, .b-lst-venues-with-thumb .venue-info span {
+  font-family: "proxima_nova_semi_bold"; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] .select {
+  border: 1px solid #dedede; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] .select.expanded {
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 2px; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li {
+  background: #f8f8f8;
+  color: #444; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] .expanded li {
+  background: #fff;
+  color: #222; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li:hover {
+  background: #eee;
+  color: #000; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li:first-child:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #888 transparent transparent transparent; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li:first-child:after {
+  border-width: 5px 4px 0 4px;
+  right: 8px; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] .select.expanded, .drpdwn-sample1 .select.expanded, .drpdwn-sample2 .select.expanded, .drpdwn-sample3 .select.expanded, .drpdwn-sample5 .select.expanded, .drpdwn-sample5 .select.expanded {
+  z-index: 4; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] .select, .drpdwn-sample1 .select, .drpdwn-sample2 .select, .drpdwn-sample3 .select, .drpdwn-sample5 .select, .drpdwn-sample5 .select {
+  list-style-type: none;
+  width: 100%;
+  position: absolute;
+  z-index: 3; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li, .drpdwn-sample1 li, .drpdwn-sample2 li, .drpdwn-sample3 li, .drpdwn-sample5 li, .drpdwn-sample5 li {
+  display: none;
+  padding-right: 30px;
+  cursor: pointer;
+  transition: background 200ms ease-out; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li:first-child, .drpdwn-sample1 li:first-child, .drpdwn-sample2 li:first-child, .drpdwn-sample3 li:first-child, .drpdwn-sample5 li:first-child, .drpdwn-sample5 li:first-child {
+  position: relative;
+  display: block; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] li:first-child:after, .drpdwn-sample1 li:first-child:after, .drpdwn-sample2 li:first-child:after, .drpdwn-sample3 li:first-child:after, .drpdwn-sample5 li:first-child:after, .drpdwn-sample5 li:first-child:after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: " "; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] {
+  position: relative; }
+  [role="dropdown-list"] .expanded li {
+    display: block; }
+    [role="dropdown-list"] .expanded li:first-child:after {
+      display: none; }
+
+@media only screen {
+  .b-venue-profile .basic-info .area {
+    width: 25%;
+    float: left; }
+  .b-venue-profile .contact-options li {
+    width: 33.3333333333%;
+    float: left; }
+  .b-search {
+    width: 58.3333333333%;
+    float: left; }
+  .b-venue-profile .basic-info .title-address {
+    width: 75%;
+    float: left; }
+  .b-main-options .options {
+    width: 83.3333333333%;
+    float: left; }
+  .b-wrapper, .b-main-banner, .b-main-banner .main-banner-intro, .b-main-banner .w-search-bar, .b-search-bar, .b-search .inpt-what-to-do, .b-search .drpdwn-venues, .b-search .drpdwn-areas, .b-search .btn-search, .b-results-map-view, .b-results-map-view .map, .b-lst-venues-no-thumb, .b-filters, .b-filters .chk-pof, .b-filters .chk-industry, .b-filters .chk-music, .b-venue-profile, .b-venue-profile .wrap-venue-info, .b-venue-profile .basic-info, .b-results-grid-view, .b-lst-venues-with-thumb, .b-lst-venues-with-thumb ul li, .b-lst-venues-with-thumb .venue-info, .b-no-results-content {
+    width: 100%;
+    float: left; } }
+
+@media only screen and (min-width:40.063em) {
+  .drpdwn-sample5 {
+    width: 16.6666666667%;
+    float: left; }
+  .b-lst-venues-with-thumb ul li {
+    width: 33.3333333333%;
+    float: left; } }
+
+@media only screen and (min-width:64.063em) {
+  .drpdwn-sample1, .drpdwn-sample2, .drpdwn-sample3, .drpdwn-sample4 {
+    width: 8.3333333333%;
+    float: left; }
+  .drpdwn-sample5, .b-search .drpdwn-venues, .b-search .drpdwn-areas, .b-search .btn-search, .b-filters .chk-pof, .b-filters .chk-industry, .b-filters .chk-music {
+    width: 16.6666666667%;
+    float: left; }
+  .b-lst-venues-no-thumb, .b-venue-profile, .b-lst-venues-with-thumb ul li {
+    width: 25%;
+    float: left; }
+  .b-main-options .options li {
+    width: 33.3333333333%;
+    float: left; }
+  .b-search .inpt-what-to-do {
+    width: 50%;
+    float: left; }
+  .b-main-options, .b-main-options, .b-filters {
+    width: 100%;
+    float: left; } }
+
+[role="inputbox"] input {
+  border: 1px solid #dedede;
+  background: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #333; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="inputbox"] input:focus {
+  background: #fff;
+  box-shadow: none; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  display: inline-block;
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  text-shadow: none;
+  text-decoration: none;
+  vertical-align: top;
+  width: 100%;
+  line-height: normal;
+  transition: all ease-in-out; }
+
+button, [class^="btn-"], [class*=" btn-"] {
+  background: #888;
+  color: #fff;
+  border: 1px solid #6f6f6f; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+button:hover, [class^="btn-"]:hover, [class*=" btn-"]:hover {
+  background: #6f6f6f; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample1, .b-search .btn-search {
+  background: #007aff;
+  color: #fff;
+  border: 1px solid #0063cc; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample1:hover, .b-search .btn-search:hover {
+  background: #0063cc; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample2 {
+  background: #ea0808;
+  color: #fff;
+  border: 1px solid #b90606; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample2:hover {
+  background: #b90606; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample3 {
+  background: #e2b003;
+  color: #fff;
+  border: 1px solid #b08702; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample3:hover {
+  background: #b08702; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample4 {
+  background: #2eb000;
+  color: #fff;
+  border: 1px solid #217d00; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.btn-sample4:hover {
+  background: #217d00; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-results-map-view .btn-view-in-grid, .b-results-grid-view .btn-view-in-map, .b-no-results .btn-view-in-grid, .b-no-results .btn-view-in-map {
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: none; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+.b-results-map-view .btn-view-in-grid:hover, .b-results-grid-view .btn-view-in-map:hover, .b-no-results .btn-view-in-grid:hover, .b-no-results .btn-view-in-map:hover {
+  background: rgba(0, 0, 0, 0.5); }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+button, [class^="btn-"], [class*=" btn-"] {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  vertical-align: top;
+  transition: background-color 300ms ease-out; }
+
+h1 {
+  margin: 0 0 0.7142857143rem; }
+
+h2 {
+  margin: 0 0 0.5rem; }
+
+h3 {
+  margin: 0 0 0.4285714286rem; }
+
+h4 {
+  margin: 0 0 0.2857142857rem; }
+
+h5, h6 {
+  margin: 0 0 0.1428571429rem; }
+
+a {
+  text-decoration: none;
+  color: #007aff;
+  transition: all 200ms ease-out; }
+  a:hover {
+    color: #0063cc; }
+
+p {
+  line-height: 1.7142857143rem; }
+
+.drpdwn-sample1 {
+  position: relative; }
+  .drpdwn-sample1 .expanded li {
+    display: block; }
+    .drpdwn-sample1 .expanded li:first-child:after {
+      display: none; }
+
+.drpdwn-sample2 {
+  position: relative; }
+  .drpdwn-sample2 .expanded li {
+    display: block; }
+    .drpdwn-sample2 .expanded li:first-child:after {
+      display: none; }
+
+.drpdwn-sample3 {
+  position: relative; }
+  .drpdwn-sample3 .expanded li {
+    display: block; }
+    .drpdwn-sample3 .expanded li:first-child:after {
+      display: none; }
+
+@media only screen and (min-width:40.063em) {
+  .drpdwn-sample5 {
+    position: relative; }
+    .drpdwn-sample5 .expanded li {
+      display: block; }
+      .drpdwn-sample5 .expanded li:first-child:after {
+        display: none; } }
+
+@media only screen and (min-width:64.063em) {
+  .drpdwn-sample5 {
+    position: relative; }
+    .drpdwn-sample5 .expanded li {
+      display: block; }
+      .drpdwn-sample5 .expanded li:first-child:after {
+        display: none; } }
+
+.central {
+  color: #007aff; }
+
+.convention {
+  color: #d22828; }
+
+.digbeth {
+  color: #780ba1; }
+
+.eastside {
+  color: #f27e01; }
+
+.gunsmiths {
+  color: #079a42; }
+
+.jewellery {
+  color: #c1d205; }
+
+.southside {
+  color: #e542b5; }
+
+.b-wrapper {
+  height: 100%; }
+  .b-wrapper .logo {
+    top: 20px;
+    right: 20px;
+    z-index: 3; }
+
+.b-main-banner .main-banner-intro {
+  bottom: 0;
+  z-index: 2; }
+  .b-main-banner .main-banner-intro:before, .b-main-banner .main-banner-intro:after {
+    content: " ";
+    display: table; }
+  .b-main-banner .main-banner-intro:after {
+    clear: both; }
+.b-main-banner h2 {
+  margin-bottom: 50px; }
+.b-main-banner .w-search-bar {
+  padding: 1.4285714286rem 0;
+  background: rgba(0, 0, 0, 0.5); }
+
+.b-main-options {
+  padding: 3.5714285714rem;
+  padding: 1.4285714286rem; }
+  .b-main-options h2 a {
+    color: #444;
+    border-bottom: 1px solid #444; }
+    .b-main-options h2 a:hover {
+      color: #2b2b2b; }
+  .b-main-options .options {
+    margin-top: 40px; }
+    .b-main-options .options:before, .b-main-options .options:after {
+      content: " ";
+      display: table; }
+    .b-main-options .options:after {
+      clear: both; }
+    .b-main-options .options li {
+      padding: 0 10px;
+      margin: 0 0 40px; }
+    .b-main-options .options .thumb {
+      margin: 0 0 15px; }
+    .b-main-options .options h3 {
+      width: 100%; }
+
+.b-search-bar {
+  padding: 1.4285714286rem 0;
+  background: rgba(0, 0, 0, 0.8); }
+  .b-results-map-view .b-search-bar, .b-results-grid-view .b-search-bar, .b-no-results .b-search-bar {
+    padding: 0.7142857143rem 0.7142857143rem; }
+
+.b-search:before, .b-search:after {
+  content: " ";
+  display: table; }
+.b-search:after {
+  clear: both; }
+.b-search .inpt-what-to-do {
+  color: red; }
+
+.b-results-map-view {
+  height: 100%; }
+  .b-results-map-view .top-bar {
+    z-index: 3; }
+  .b-results-map-view .map {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: url(../images/bg-map.png);
+    height: 100%; }
+  .b-results-map-view .btn-view-in-grid {
+    margin: 2px 0 0 5px; }
+
+.b-lst-venues-no-thumb {
+  padding: 7.5714285714rem 0 0;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%; }
+  .b-lst-venues-no-thumb ul {
+    overflow-y: scroll;
+    height: 100%;
+    background: #fff;
+    border-top: 1px solid #dedede; }
+  .b-lst-venues-no-thumb li {
+    border-top: 1px solid #dedede; }
+  .b-lst-venues-no-thumb a {
+    padding: 10px;
+    color: #444; }
+    .b-lst-venues-no-thumb a:hover {
+      background: #fafafa; }
+  .b-lst-venues-no-thumb h2 {
+    font-weight: normal;
+    margin: 0; }
+
+.b-filters {
+  padding: 1.4285714286rem 0.7142857143rem;
+  top: 56px;
+  left: 0;
+  z-index: 3;
+  height: 50px;
+  background: white; }
+
+.b-venue-profile {
+  padding: 4rem 0 0;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%; }
+  .b-venue-profile .venue-details {
+    background: #fff;
+    overflow-y: scroll;
+    height: 100%; }
+  .b-venue-profile .thumb {
+    width: 100%; }
+  .b-venue-profile .wrap-venue-info {
+    padding: 0.7142857143rem; }
+  .b-venue-profile .basic-info {
+    padding: 0 0 0.7142857143rem; }
+    .b-venue-profile .basic-info h1 {
+      margin: 0; }
+  .b-venue-profile .contact-options li {
+    border-top: 1px solid #007aff;
+    border-bottom: 1px solid #007aff;
+    border-left: 1px solid #007aff;
+    margin: 5px 0; }
+    .b-venue-profile .contact-options li:last-child {
+      border-right: 1px solid #007aff; }
+  .b-venue-profile .contact-options a {
+    display: block;
+    color: #007aff;
+    text-align: center;
+    padding: 5px 0;
+    background: #fff; }
+  .b-venue-profile .contact-options a:hover, .b-venue-profile .contact-options a.selected {
+    color: #fff;
+    background: #007aff; }
+  .b-venue-profile .more-info-title {
+    margin: 20px 0 0; }
+  .b-venue-profile .lst-opening-hours {
+    margin: 10px 0; }
+    .b-venue-profile .lst-opening-hours .sched {
+      padding: 5px 0 5px 10px;
+      border-bottom: 1px solid #eee; }
+      .b-venue-profile .lst-opening-hours .sched span {
+        float: right; }
+
+.b-results-grid-view .btn-view-in-map {
+  margin: 2px 0 0 5px; }
+
+.b-lst-venues-with-thumb ul a {
+  height: 230px; }
+.b-lst-venues-with-thumb img {
+  -webkit-filter: opacity(80%);
+  -moz-filter: opacity(80%);
+  -ms-filter: opacity(80%);
+  -o-filter: opacity(80%);
+  filter: opacity(80%);
+  width: 100%; }
+  .b-lst-venues-with-thumb img:hover {
+    -webkit-filter: grayscale(0) contrast(150%);
+    -moz-filter: grayscale(0) contrast(150%);
+    -ms-filter: grayscale(0) contrast(150%);
+    -o-filter: grayscale(0) contrast(150%);
+    filter: grayscale(0) contrast(150%); }
+.b-lst-venues-with-thumb .venue-info {
+  padding: 0.3571428571rem 0.7142857143rem;
+  bottom: 0;
+  z-index: 2;
+  background: #000;
+  /*fallback if rgba is not supported*/
+  background: rgba(0, 0, 0, 0.7); }
+  .b-lst-venues-with-thumb .venue-info h2 {
+    color: #f2f2f2;
+    margin: 0; }
+.b-lst-venues-with-thumb li {
+  background: #000; }
+
+.b-no-results .btn-view-in-grid, .b-no-results .btn-view-in-map {
+  margin: 2px 0 0 5px; }
+
+.b-no-results-content {
+  height: 100%; }
+  .b-no-results-content .empty-text {
+    background: #dfdfdf;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 10% 0 0; }
+    .b-no-results-content .empty-text h1 {
+      color: #444;
+      margin: 0; }
+    .b-no-results-content .empty-text p {
+      color: #666;
+      margin: 0; }
