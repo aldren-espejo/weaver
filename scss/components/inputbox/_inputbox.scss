@@ -17,7 +17,7 @@ $inputbox-default-size: small !default;
 	}
 }
 
-input, textarea{
+input[type="text"], input[type="password"], input[type="email"], textarea{
 
   display: inline-block;
   outline: 0;

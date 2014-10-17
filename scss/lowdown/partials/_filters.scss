@@ -1,10 +1,25 @@
 .b-filters{
-	@include grid-sml(12);
+	@include grid-sml(12, 20 10);
 	@include grid-lrg(12);
 	@extend %e_position-absolute;
 	top: 56px;
 	left: 0;
-	z-index: 2;
+	z-index: 3;
 	height: 50px;
 	background: white;
+
+	.chk-pof{
+		@include grid-sml(12);
+		@include grid-lrg(2);
+	}
+
+	.chk-industry{
+		@include grid-sml(12);
+		@include grid-lrg(2);
+	}
+
+	.chk-music{
+		@include grid-sml(12);
+		@include grid-lrg(2);
+	}
 }
