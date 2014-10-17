@@ -6,7 +6,7 @@
     this.$options = $(container).find('[data-value]');
     this.tempOptions = [];
     this.init();
-  }
+  };
 
   DropdownList.prototype = {
 
@@ -21,14 +21,14 @@
         $(this).click(function(e){
           self.select($(this));
           e.stopPropagation();
-        }); 
+        });
 
       });
 
       // unexpand if user clicks outside the dropdown list
       $(document).click(function(){
         self.$list.removeClass('expanded');
-      })
+      });
 
       this.setContainerHeight();
     },
@@ -40,11 +40,11 @@
       self.expand();
 
       if(selectedOption.is(":first-child")) return;
-      
+
       selectedOption.detach();
-      self.$list.prepend(selectedOption);   
+      self.$list.prepend(selectedOption);
       self.$container.attr('data-value',value);
-      
+
     },
 
     expand: function(){
@@ -58,7 +58,7 @@
       var height = self.$list.outerHeight();
       this.$container.css({height:height});
     }
-  }
+  };
 
   $.fn.dropdownList = function(){
     var self = this;
@@ -68,8 +68,9 @@
       $.data(this, 'dropdownList', dropdownList);
 
     });
-  }
+  };
 
-  $('[role="dropdown-list"]').dropdownList();
+  // Example Usage:
+  // $('[role="dropdown-list"]').dropdownList();
 
 }( jQuery, window, document ));
