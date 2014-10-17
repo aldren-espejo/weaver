@@ -1,0 +1,159 @@
+@import "skins/default";
+@import "skins/rounded";
+
+// can be overwritten
+$switch-default-skin: rounded !default;
+$switch-default-size: medium !default;
+$switch-xsmall-width: 18px !default;
+$switch-small-width: 33px !default;
+$switch-medium-width: 40px !default;
+$switch-large-width: 55px !default;
+$switch-xlarge-width: 70px !default;
+
+@include placeholder(switch-xsmall-base){
+	padding-left: rem-calc($switch-xsmall-width + 5px);
+
+	&:before{
+		width: rem-calc($switch-xsmall-width);
+	}
+
+	&:after{
+		width: rem-calc($switch-xsmall-width /2);
+	}
+}
+
+@include placeholder(switch-small-base){
+	padding-left: rem-calc($switch-small-width + 5px);
+
+	&:before{
+		width: rem-calc($switch-small-width);
+	}
+
+	&:after{
+		width: rem-calc($switch-small-width /2);
+	}
+}
+
+@include placeholder(switch-medium-base){
+	padding-left: rem-calc($switch-medium-width + 5px);
+
+	&:before{
+		width: rem-calc($switch-medium-width);
+	}
+
+	&:after{
+		width: rem-calc($switch-medium-width /2);
+	}
+}
+
+@include placeholder(switch-large-base){
+	padding-left: rem-calc($switch-large-width + 5px);
+
+	&:before{
+		width: rem-calc($switch-large-width)
+	}
+
+	&:after{
+		width: rem-calc($switch-large-width /2);
+	}
+}
+
+@include placeholder(switch-xlarge-base){
+	padding-left: rem-calc($switch-xlarge-width + 5px);
+
+	&:before{
+		width: rem-calc($switch-xlarge-width);
+	}
+
+	&:after{
+		width: rem-calc($switch-xlarge-width /2);
+	}
+}
+
+@include placeholder(switch-checked-xsmall-base){
+	transform: translate(rem-calc(($switch-xsmall-width / 2) - 8px), 0);
+}
+
+@include placeholder(switch-checked-small-base){
+	transform: translate(rem-calc(($switch-small-width / 2) - 8px), 0);
+}
+
+@include placeholder(switch-checked-medium-base){
+	transform: translate(rem-calc(($switch-medium-width / 2) - 8px), 0);
+}
+
+@include placeholder(switch-checked-large-base){
+	transform: translate(rem-calc(($switch-large-width / 2) - 8px), 0);
+}
+
+@include placeholder(switch-checked-xlarge-base){
+	transform: translate(rem-calc(($switch-xlarge-width / 2) - 8px), 0);
+}
+
+
+@mixin checkbox($size: null, $skin: null){
+
+	input + label{
+		@extend %e_position-relative;
+		@extend %e_padding-#{$size};
+		@extend %e_text-#{$size};
+		@extend %switch-#{$size}-base;
+	
+		&:before{
+			@extend %switch-#{$skin}-skin;
+		}
+
+		&:after{
+			@extend %switch-toggle-#{$skin}-skin;
+		}
+	}
+
+	input:checked + label{
+
+		&:before{
+			@extend %switch-checked-#{$skin}-skin;
+		}
+
+		&:after{
+			@extend %switch-checked-#{$size}-base;
+		}
+	}
+	
+}
+
+
+[role="switch"]{
+	@include checkbox($switch-default-size, $switch-default-skin);
+}
+
+
+[role="switch"] input{
+	@extend %e_position-absolute;
+	top:0;
+	left: 5px;
+	padding: 0;
+	opacity: 0;
+
+	& + label {
+		@extend %e_display-inline-block;
+		cursor: pointer;
+
+		&:before, &:after{
+			@extend %e_position-absolute;
+			content: " ";
+			transition: all 0.15s ease-out;
+		}
+
+		&:before{
+			top: 5px;
+			left: 0;
+			bottom: 5px;
+		}
+
+		&:after{
+			top: 9px;
+			left: 4px;
+			bottom: 9px;
+		}
+	}
+}

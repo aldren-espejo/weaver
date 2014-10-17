@@ -1,0 +1,15 @@
+$switch-bg: #444;
+$toggle-bg: #fff;
+$switch-checked-bg: $primary-color;
+
+@include placeholder(switch-default-skin){
+	background: $switch-bg;
+}
+
+@include placeholder(switch-checked-default-skin){
+	background: $switch-checked-bg;
+}
+
+@include placeholder(switch-toggle-default-skin){
+	background: $toggle-bg;
+}

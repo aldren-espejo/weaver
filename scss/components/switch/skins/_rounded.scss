@@ -1,0 +1,18 @@
+$switch-bg: #444;
+$toggle-bg: #fff;
+$switch-checked-bg: $primary-color;
+$radius: rem-calc(50);
+
+@include placeholder(switch-rounded-skin){
+	background: $switch-bg;
+	border-radius: $radius;
+}
+
+@include placeholder(switch-checked-rounded-skin){
+	background: $switch-checked-bg;
+}
+
+@include placeholder(switch-toggle-rounded-skin){
+	background: $toggle-bg;
+	border-radius: $radius;
+}
