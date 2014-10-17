@@ -1,0 +1,13 @@
+$button-bg: $loud-color;
+$button-color: #fff;
+$button-border: 1px solid darken($button-bg, 10%);
+
+@include placeholder(button-loud-skin){
+	background: $button-bg;
+	color: $button-color;
+	border: $button-border;
+}
+
+@include placeholder(button-hover-loud-skin){
+	background: darken($button-bg, 10%);
+}

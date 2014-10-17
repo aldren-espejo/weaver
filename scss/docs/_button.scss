@@ -1,0 +1,19 @@
+.btn-sample1{
+	@include button(xsmall, cta);
+}
+
+.btn-sample2{
+	@include button(small, danger);
+}
+
+.btn-sample3{
+	@include button(medium, warning);
+}
+
+.btn-sample4{
+	@include button(large, loud);
+}
+
+.btn-sample5{
+	@include button(xlarge);
+}

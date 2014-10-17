@@ -1,0 +1,13 @@
+$button-bg: $primary-color;
+$button-color: #fff;
+$button-border: 1px solid darken($button-bg, 10%);
+
+@include placeholder(button-cta-skin){
+	background: $button-bg;
+	color: $button-color;
+	border: $button-border;
+}
+
+@include placeholder(button-hover-cta-skin){
+	background: darken($button-bg, 10%);
+}

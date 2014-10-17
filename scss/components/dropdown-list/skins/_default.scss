@@ -1,12 +1,76 @@
-@include placeholder(dropdown-list-default-skin){
+// skin variables that can be overwritten
+$dropdown-list-border-color:#dedede !default;
+$dropdown-list-box-shadow: rgba(0,0,0,0.3) !default;
+$dropdown-list-border-radius: 2px !default;
 
-	border: 1px solid #dedede;
+$list-option-color: #444 !default;
+$list-option-color-active: #222 !default;
+$list-option-bg: #f8f8f8 !default;
+$list-option-bg-active: #fff !default;
+$list-option-color-hover: #000 !default;
+$list-option-bg-hover: #eee !default;
+
+$drop-icon-bg: #888 !default;
+$drop-con-xsmall-size: 3px !default;
+$drop-con-small-size: 4px !default;
+$drop-con-medium-size: 5px !default;
+$drop-con-large-size: 6px !default;
+$drop-con-xlarge-size: 7px !default;
+
+@include placeholder(dropdown-list-default-skin){
+	border: 1px solid $dropdown-list-border-color;
 }
 
 @include placeholder(dropdown-list-expanded-default-skin){
+	-webkit-box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
+	-moz-box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
+	box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
+	border-radius: $dropdown-list-border-radius;		
+}
 
-	-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
-	border-radius: 2px;		
+@include placeholder(list-option-default-skin){
+	background: $list-option-bg;
+	color: $list-option-color;
+}
+
+@include placeholder(list-option-active-default-skin){
+	background: $list-option-bg-active;
+	color: $list-option-color-active;
+}
+
+@include placeholder(list-option-hover-default-skin){
+	background: $list-option-bg-hover;
+	color: $list-option-color-hover;
+}
+
+@include placeholder(drop-icon-default-skin){
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: $drop-icon-bg transparent transparent transparent;	
+}
+
+@include placeholder(drop-icon-default-xsmall){
+	border-width: ($drop-con-xsmall-size + 1) $drop-con-xsmall-size 0 $drop-con-xsmall-size;
+	right:$drop-con-xsmall-size*2;
+}
+
+@include placeholder(drop-icon-default-small){
+	border-width: ($drop-con-small-size + 1) $drop-con-small-size 0 $drop-con-small-size;
+	right:$drop-con-small-size *2;
+}
+
+@include placeholder(drop-icon-default-medium){
+	border-width: ($drop-con-medium-size + 1) $drop-con-medium-size 0 $drop-con-medium-size;
+	right:$drop-con-medium-size*2;
+}
+
+@include placeholder(drop-icon-default-large){
+	border-width: ($drop-con-large-size + 1) $drop-con-large-size 0 $drop-con-large-size;
+	right:$drop-con-large-size *2;
+}
+
+@include placeholder(drop-icon-default-xlarge){
+	border-width: ($drop-con-xlarge-size + 1) $drop-con-xlarge-size 0 $drop-con-xlarge-size;
+	right:$drop-con-xlarge-size*2;
 }

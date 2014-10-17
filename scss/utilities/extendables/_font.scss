@@ -1,0 +1,27 @@
+@include placeholder(e_font-size-xlarge){
+	font-size: $type-text-xlarge;
+}
+
+@include placeholder(e_font-size-large){
+	font-size: $type-text-large;
+}
+
+@include placeholder(e_font-size-medium){
+	font-size: $type-text-medium;
+}
+
+@include placeholder(e_font-size-small){
+	font-size: $type-text-small;
+}
+
+@include placeholder(e_font-size-xsmall){
+	font-size: $type-text-xsmall;
+}
+
+@include placeholder(e_font-family-regular){
+	font-family: "proxima_nova_regular";
+}
+
+@include placeholder(e_font-family-semi-bold){
+	font-family: "proxima_nova_semi_bold";
+}

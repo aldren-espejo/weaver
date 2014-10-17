@@ -1,0 +1,32 @@
+@import "skins/default";
+@import "skins/cta";
+@import "skins/danger";
+@import "skins/warning";
+@import "skins/loud";
+@import "skins/transparent";
+
+// can be overwritten
+$button-default-skin: default !default;
+$button-default-size: small !default;
+
+@mixin button($size: null, $skin: null){
+	@extend %button-#{$skin}-skin;
+	@extend %e_padding-#{$size};
+	@extend %e_text-#{$size};
+
+	&:hover{
+		@extend %button-hover-#{$skin}-skin;
+	}
+}
+
+button, [class^="btn-"], [class*=" btn-"]{
+	@include button($button-default-size, $button-default-skin);
+	@extend %e_display-inline-block;
+	@extend %e_text-align-center;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	vertical-align: top;
+	transition: background-color 300ms ease-out;
+}

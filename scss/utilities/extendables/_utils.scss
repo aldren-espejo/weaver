@@ -1,0 +1,8 @@
+@include placeholder(e_centered){
+	margin: 0 auto;
+	float: none !important;
+}
+
+@include placeholder(e_rounded-right-side){
+	border-radius: 0 2px 2px 0;
+}

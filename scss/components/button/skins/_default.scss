@@ -1,0 +1,13 @@
+$button-bg: #888 !default;
+$button-color: #fff !default;
+$button-border: 1px solid darken($button-bg, 10%);
+
+@include placeholder(button-default-skin){
+	background: $button-bg;
+	color: $button-color;
+	border: $button-border;
+}
+
+@include placeholder(button-hover-default-skin){
+	background: darken($button-bg, 10%);
+}

@@ -1,5 +1,14 @@
-@import "settings";
-@import "functions";
+// can be overwritten
+$total-columns: 12 !default;
+$column-gutter: 30 !default;
+$with-default-gutters: false !default;
+$default-gutters: rem-calc( 0 ($column-gutter/2) ) !default;
+
+
+// Function to calculate the grid width
+@function grid-calc($colNumber, $totalColumns) {
+  @return percentage(($colNumber / $totalColumns));
+}
 
 // create the grid placeholders in each breakponits
 @each $breakpoint in $breakpoints {
@@ -62,6 +71,6 @@
 	@extend %grid-#{$columns}-columns-#{$breakpoint}#{$with};
 
 	@if $centered == true {
-		@extend %centered-#{$breakpoint};
+		@extend %e_centered-#{$breakpoint};
 	}
 }

@@ -1,0 +1,11 @@
+.b-wrapper{
+	@include grid-sml(12);
+	height: 100%;
+	
+	.logo{
+		@extend %e_position-absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 3;
+	}
+}

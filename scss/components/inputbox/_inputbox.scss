@@ -1,9 +1,24 @@
-@import "settings";
+@import "skins/default";
+
+// can be overwritten
+$inputbox-default-skin: default !default;
+$inputbox-default-size: small !default;
+
+@mixin input($size: null, $skin: null){
+
+	input{
+    @extend %e_padding-#{$size};
+    @extend %e_text-#{$size};
+		@extend %inputbox-#{$skin}-skin;
+
+		&:focus{
+			@extend %inputbox-focus-#{$skin}-skin;
+  	}
+	}
+}
 
 input, textarea{
-  border: 1px solid $input-border-color;
-  background: $input-bg;
-  color: #333;
+
   display: inline-block;
   outline: 0;
   overflow: visible;
@@ -11,20 +26,12 @@ input, textarea{
   text-shadow: none;
   text-decoration: none;
   vertical-align: top;
-  width: auto;
+  width: 100%;
   line-height: normal;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out;
-
-  &:focus{
-  	background: $input-bg-focus;
-  	box-shadow: none;
-  }
 }
 
-@mixin input($size:small){
-	input{
-		@extend %e_padding-#{$size};
-		@extend %e_text-#{$size};
-	}
+[role="inputbox"]{
+  @include input($inputbox-default-size, $inputbox-default-skin);
+
 }

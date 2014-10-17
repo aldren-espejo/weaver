@@ -1,0 +1,13 @@
+$button-bg: $danger-color;
+$button-color: #fff;
+$button-border: 1px solid darken($button-bg, 10%);
+
+@include placeholder(button-danger-skin){
+	background: $button-bg;
+	color: $button-color;
+	border: $button-border;
+}
+
+@include placeholder(button-hover-danger-skin){
+	background: darken($button-bg, 10%);
+}

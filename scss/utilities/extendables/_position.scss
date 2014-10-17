@@ -1,0 +1,12 @@
+@include placeholder(e_position-absolute){
+	position: absolute;
+}
+
+@include placeholder(e_position-relative){
+	position: relative;
+}
+
+@include placeholder(e_center-vertical){
+	top: 50%;
+  	transform: translateY(-50%);
+}

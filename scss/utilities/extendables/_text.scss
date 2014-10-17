@@ -1,0 +1,23 @@
+@include placeholder(e_text-align-center){
+	text-align: center;
+}
+
+@include placeholder(e_text-align-left){
+	text-align: left;
+}
+
+@include placeholder(e_text-align-right){
+	text-align: right;
+}
+
+@include placeholder(e_text-transform-uppercase){
+	text-transform: uppercase; 
+}
+
+@include placeholder(e_text-color-white){
+	color: #fff;
+}
+
+@include placeholder(e_decoration-underline){
+	text-decoration: underline;
+}

@@ -1,0 +1,11 @@
+@include placeholder(e_display-block){
+	display:block;
+}
+
+@include placeholder(e_display-none){
+	display:none;
+}
+
+@include placeholder(e_display-inline-block){
+	display:inline-block;
+}

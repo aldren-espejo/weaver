@@ -1,0 +1,23 @@
+.b-results-map-view{
+	@include grid-sml(12);
+	height: 100%;
+
+	.top-bar{
+		@extend %e_position-relative;
+		z-index: 3;
+	}
+
+	.map{
+		@include grid-sml(12);
+		@extend %e_position-absolute;
+		top: 0;
+		left:  0;
+		z-index: 1;
+		background: url(../images/bg-map.png);
+		height: 100%;
+	}
+
+	.btn-view-in-grid{
+		@include button($skin: transparent);
+	}
+}

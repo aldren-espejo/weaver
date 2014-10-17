@@ -1,0 +1,13 @@
+$button-bg: rgba(0,0,0,0);
+$button-color: #fff;
+$button-border: none;
+
+@include placeholder(button-transparent-skin){
+	background: $button-bg;
+	color: $button-color;
+	border: $button-border;
+}
+
+@include placeholder(button-hover-transparent-skin){
+	background: rgba(0,0,0,0.5);
+}

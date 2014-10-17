@@ -1,19 +1,30 @@
 // the basis of all rem values
-$base-rem: 14px;
+$base-rem: 14px !default;
+$primary-color: #007aff !default;
+$danger-color: #ea0808 !default;
+$warning-color: #e2b003 !default;
+$loud-color: #2eb000 !default;
 
 // variables that control form field padding
-$field-padding-xsmall: rem-calc(8 12);
-$field-padding-small: rem-calc(9 13);
-$field-padding-medium: rem-calc(10 14);
-$field-padding-large: rem-calc(12 16);
-$field-padding-xlarge: rem-calc(14 20);
+$field-padding-xsmall: rem-calc(8 12) !default;
+$field-padding-small: rem-calc(9 13) !default;
+$field-padding-medium: rem-calc(10 14) !default;
+$field-padding-large: rem-calc(12 16) !default;
+$field-padding-xlarge: rem-calc(14 20) !default;
 
-// variables that control text sizes
-$field-text-xsmall: rem-calc(10);
-$field-text-small: rem-calc(14);
-$field-text-medium: rem-calc(16);
-$field-text-large: rem-calc(18);
-$field-text-xlarge: rem-calc(20);
+// variables that control field text sizes
+$field-text-xsmall: rem-calc(10) !default;
+$field-text-small: rem-calc(14) !default;
+$field-text-medium: rem-calc(16) !default;
+$field-text-large: rem-calc(18) !default;
+$field-text-xlarge: rem-calc(20) !default;
+
+// variables that control type text size
+$type-text-xsmall: rem-calc(11) !default;
+$type-text-small: rem-calc(14) !default;
+$type-text-medium: rem-calc(18) !default;
+$type-text-large: rem-calc(36) !default;
+$type-text-xlarge: rem-calc(48) !default;
 
 // media breakpoints mapping
 $small-range: ('0em', '40em') !default;

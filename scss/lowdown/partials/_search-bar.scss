@@ -1,0 +1,8 @@
+.b-search-bar{
+	@include grid-sml(12, 20 0);
+	background: rgba(0,0,0,0.8);
+
+	.b-results-map-view &{
+		padding: rem-calc(10 10);
+	}
+}
