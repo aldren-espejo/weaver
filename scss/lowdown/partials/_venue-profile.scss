@@ -1,0 +1,105 @@
+.b-venue-profile{
+	@include grid-sml(12);
+	@include grid-lrg(3, 56 0 0);
+	@extend %e_position-absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	height: 100%;
+
+	.venue-details{
+		background: #fff;
+		overflow-y: scroll;
+		height: 100%;
+	}
+
+	.thumb{
+		width: 100%;
+	}
+
+	.wrap-venue-info{
+		@include grid-sml(12, 10);
+	}
+
+	.basic-info{
+		@include grid-sml(12, 0 0 10);
+		.title-address{
+			@include grid-sml(9);
+
+			span{
+				@extend %e_font-size-small;
+			}
+		}
+
+		h1{
+			@extend %e_font-size-medium;
+			margin: 0;
+		}
+
+		.area{
+			@include grid-sml(3);
+			@extend %e_text-transform-uppercase;
+			@extend %e_text-align-right;
+			@extend %e_font-size-xsmall;
+			@extend %e_font-family-semi-bold;
+		}		
+	}
+
+	.contact-options{
+		@extend %e_list-style-type-none;
+
+		li{
+			@include grid-sml(4);
+			border-top:1px solid $primary-color;
+			border-bottom:1px solid $primary-color;
+			border-left:1px solid $primary-color;
+			margin:5px 0;
+
+			&:last-child{
+				border-right:1px solid $primary-color;
+			}
+		}
+
+		a{
+			display: block;
+			color:$primary-color;
+			text-align: center;
+			padding:5px 0;
+			background:#fff;
+		}
+
+		a:hover, a.selected{
+			color: #fff;
+			background:$primary-color;
+		}
+	}
+
+	.venue-desc{
+		@extend %e_font-size-small;
+	}
+
+	.more-info-title{
+		@extend %e_font-size-small;
+		@extend %e_font-family-semi-bold;
+		@extend %e_text-transform-uppercase;
+		@extend %e_display-inline-block;
+		margin: 20px 0 0;
+	}
+
+	.lst-opening-hours{
+		@extend %e_list-style-type-none;
+		margin:10px 0;
+
+		.sched{
+			@extend %e_font-size-xsmall;
+			padding:5px 0 5px 10px;
+			border-bottom:1px solid #eee;
+			
+			span{
+				@extend %e_font-family-semi-bold;
+				// @extend %e_font-size-small;
+				float: right;
+			}
+		}
+	}			
+}
