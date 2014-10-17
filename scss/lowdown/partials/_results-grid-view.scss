@@ -1,3 +1,11 @@
+.b-results-grid-view{
+	@include grid-sml(12);
+	
+	.btn-view-in-map{
+		@include button($skin: transparent);
+		margin: 2px 0 0 5px;
+	}	
+}
 .b-lst-venues-with-thumb{
 	@include grid-sml(12);
 

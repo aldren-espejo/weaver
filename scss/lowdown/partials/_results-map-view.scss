@@ -19,5 +19,6 @@
 
 	.btn-view-in-grid{
 		@include button($skin: transparent);
+		margin: 2px 0 0 5px;
 	}
 }
