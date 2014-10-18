@@ -114,7 +114,7 @@ $switch-toggle-gap: 3px !default;
 }
 
 
-@mixin checkbox($size: null, $skin: null){
+@mixin switch($size: null, $skin: null){
 
 	input + label{
 		@extend %e_position-relative;
@@ -146,7 +146,7 @@ $switch-toggle-gap: 3px !default;
 
 
 [role="switch"]{
-	@include checkbox($switch-default-size, $switch-default-skin);
+	@include switch($switch-default-size, $switch-default-skin);
 }
 
 
