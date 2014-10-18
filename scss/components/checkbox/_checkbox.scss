@@ -1,0 +1,114 @@
+@import "skins/default";
+@import "skins/rounded";
+
+// can be overwritten
+$checkbox-default-skin: rounded !default;
+$checkbox-default-size: small !default;
+
+$checkbox-xsmall-size: 15px !default;
+$checkbox-small-size: 23px !default;
+$checkbox-medium-size: 28px !default;
+$checkbox-large-size: 31px !default;
+$checkbox-xlarge-size: 34px !default;
+
+@include placeholder(checkbox-xsmall-base){
+	
+	padding-left: rem-calc(($checkbox-xsmall-size) + ($checkbox-xsmall-size / 3));
+
+	&:before{
+		width: rem-calc($checkbox-xsmall-size);
+		height: rem-calc($checkbox-xsmall-size);
+	}	
+}
+
+@include placeholder(checkbox-small-base){
+
+	padding-left: rem-calc(($checkbox-small-size) + ($checkbox-small-size / 3));
+
+	&:before{
+		width: rem-calc($checkbox-small-size);
+		height: rem-calc($checkbox-small-size);
+	}
+}
+
+@include placeholder(checkbox-medium-base){
+
+	padding-left: rem-calc(($checkbox-medium-size) + ($checkbox-medium-size / 3));
+
+	&:before{
+		width: rem-calc($checkbox-medium-size);
+		height: rem-calc($checkbox-medium-size);
+	}	
+}
+
+@include placeholder(checkbox-large-base){
+
+	padding-left: rem-calc(($checkbox-large-size) + ($checkbox-large-size / 3));
+
+	&:before{
+		width: rem-calc($checkbox-large-size);
+		height: rem-calc($checkbox-large-size);
+	}	
+}
+
+@include placeholder(checkbox-xlarge-base){
+
+	padding-left: rem-calc(($checkbox-xlarge-size) + ($checkbox-xlarge-size / 3));
+
+	&:before{
+		width: rem-calc($checkbox-xlarge-size);
+		height: rem-calc($checkbox-xlarge-size);
+	}	
+}
+
+
+
+@mixin checkbox($size: null, $skin: null){
+
+	input + label{
+		@extend %e_position-relative;
+		@extend %e_padding-#{$size};
+		@extend %e_text-#{$size};
+		@extend %checkbox-#{$size}-base;
+	
+		&:before{
+			@extend %checkbox-#{$skin}-skin;
+		}
+	}
+
+	input:checked + label{
+
+		&:before{
+			@extend %checkbox-checked-#{$skin}-skin;
+		}
+	}
+	
+}
+
+
+[role="checkbox"]{
+	@include checkbox($checkbox-default-size, $checkbox-default-skin);
+}
+
+
+[role="checkbox"] input{
+	@extend %e_position-absolute;
+	top:0;
+	left: 5px;
+	padding: 0;
+	opacity: 0;
+
+	& + label {
+		@extend %e_display-inline-block;
+		cursor: pointer;
+
+		&:before{
+			@extend %e_display-inline-block;
+			@extend %e_position-absolute;
+			@extend %e_center-vertical;
+			content: " ";
+			left: 0;
+			transition: background-color 0.15s ease-out;
+		}
+	}
+}

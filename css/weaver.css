@@ -57,7 +57,7 @@ img {
 
 @media only screen and (min-width:64.063em) { }
 
-[role="dropdown-list"] li, [role="inputbox"] input, button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, .drpdwn-sample2 li, .sample2 input, .btn-sample2 {
+[role="dropdown-list"] li, [role="inputbox"] input, button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role="checkbox"] input + label, .drpdwn-sample2 li, .sample2 input, .btn-sample2 {
   padding: 0.6428571429rem 0.9285714286rem; }
 
 @media only screen { }
@@ -102,7 +102,7 @@ img {
 
 @media only screen and (min-width:64.063em) { }
 
-[role="dropdown-list"] li, [role="inputbox"] input, button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, .drpdwn-sample2 li, .sample2 input, .btn-sample2 {
+[role="dropdown-list"] li, [role="inputbox"] input, button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role="checkbox"] input + label, .drpdwn-sample2 li, .sample2 input, .btn-sample2 {
   font-size: 1rem; }
 
 @media only screen { }
@@ -150,7 +150,7 @@ img {
 
 @media only screen and (min-width:64.063em) { }
 
-button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role="switch"] input + label:before, [role="switch"] input + label:after {
+button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role="switch"] input + label:before, [role="switch"] input + label:after, [role="checkbox"] input + label, [role="checkbox"] input + label:before {
   display: inline-block; }
 
 @media only screen { }
@@ -159,7 +159,7 @@ button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role=
 
 @media only screen and (min-width:64.063em) { }
 
-[role="switch"] input, [role="switch"] input + label:before, [role="switch"] input + label:after {
+[role="switch"] input, [role="switch"] input + label:before, [role="switch"] input + label:after, [role="checkbox"] input, [role="checkbox"] input + label:before {
   position: absolute; }
 
 @media only screen { }
@@ -168,7 +168,7 @@ button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role=
 
 @media only screen and (min-width:64.063em) { }
 
-[role="switch"] input + label {
+[role="switch"] input + label, [role="checkbox"] input + label {
   position: relative; }
 
 @media only screen { }
@@ -177,7 +177,7 @@ button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role=
 
 @media only screen and (min-width:64.063em) { }
 
-[role="switch"] input + label:before, [role="switch"] input + label:after {
+[role="switch"] input + label:before, [role="switch"] input + label:after, [role="checkbox"] input + label:before {
   top: 50%;
   transform: translateY(-50%); }
 
@@ -806,6 +806,89 @@ p {
     [role="switch"] input + label:after {
       content: " ";
       transition: all 0.15s ease-out; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="checkbox"] input + label:before {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 3.5714285714rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="checkbox"] input:checked + label:before {
+  background: #007aff url(../images/check-icon.png) no-repeat center center;
+  background-size: 70%;
+  border: none;
+  border-radius: 3.5714285714rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="checkbox"] input + label {
+  padding-left: 2.1904761905rem; }
+  [role="checkbox"] input + label:before {
+    width: 1.6428571429rem;
+    height: 1.6428571429rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="checkbox"] input {
+  top: 0;
+  left: 5px;
+  padding: 0;
+  opacity: 0; }
+  [role="checkbox"] input + label {
+    cursor: pointer; }
+    [role="checkbox"] input + label:before {
+      content: " ";
+      left: 0;
+      transition: background-color 0.15s ease-out; }
 
 .drpdwn-sample1 {
   position: relative; }
