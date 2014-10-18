@@ -3,91 +3,114 @@
 
 // can be overwritten
 $switch-default-skin: rounded !default;
-$switch-default-size: medium !default;
-$switch-xsmall-width: 18px !default;
-$switch-small-width: 33px !default;
-$switch-medium-width: 40px !default;
-$switch-large-width: 55px !default;
-$switch-xlarge-width: 70px !default;
+$switch-default-size: small !default;
+
+$switch-xsmall-size: 15px !default;
+$switch-small-size: 20px !default;
+$switch-medium-size: 25px !default;
+$switch-large-size: 30px !default;
+$switch-xlarge-size: 35px !default;
+
+$switch-toggle-gap: 3px !default;
 
 @include placeholder(switch-xsmall-base){
-	padding-left: rem-calc($switch-xsmall-width + 5px);
+
+	padding-left: rem-calc(($switch-xsmall-size * 2) + ($switch-xsmall-size / 3));
 
 	&:before{
-		width: rem-calc($switch-xsmall-width);
+		width: rem-calc(($switch-xsmall-size * 2) - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-xsmall-size);
 	}
 
 	&:after{
-		width: rem-calc($switch-xsmall-width /2);
-	}
+		width: rem-calc($switch-xsmall-size - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-xsmall-size - ($switch-toggle-gap * 2));
+		left: $switch-toggle-gap;
+	}	
 }
 
 @include placeholder(switch-small-base){
-	padding-left: rem-calc($switch-small-width + 5px);
+
+	padding-left: rem-calc(($switch-small-size * 2) + ($switch-xsmall-size / 3));
 
 	&:before{
-		width: rem-calc($switch-small-width);
+		width: rem-calc(($switch-small-size * 2) - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-small-size);
 	}
 
 	&:after{
-		width: rem-calc($switch-small-width /2);
-	}
+		width: rem-calc($switch-small-size - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-small-size - ($switch-toggle-gap * 2));
+		left: $switch-toggle-gap;
+	}	
 }
 
 @include placeholder(switch-medium-base){
-	padding-left: rem-calc($switch-medium-width + 5px);
+
+	padding-left: rem-calc(($switch-medium-size * 2) + ($switch-xsmall-size / 3));
 
 	&:before{
-		width: rem-calc($switch-medium-width);
+		width: rem-calc(($switch-medium-size * 2) - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-medium-size);
 	}
 
 	&:after{
-		width: rem-calc($switch-medium-width /2);
-	}
+		width: rem-calc($switch-medium-size - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-medium-size - ($switch-toggle-gap * 2));
+		left: $switch-toggle-gap;
+	}	
 }
 
 @include placeholder(switch-large-base){
-	padding-left: rem-calc($switch-large-width + 5px);
+
+	padding-left: rem-calc(($switch-large-size * 2) + ($switch-xsmall-size / 3));
 
 	&:before{
-		width: rem-calc($switch-large-width)
+		width: rem-calc(($switch-large-size * 2) - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-large-size);
 	}
 
 	&:after{
-		width: rem-calc($switch-large-width /2);
-	}
+		width: rem-calc($switch-large-size - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-large-size - ($switch-toggle-gap * 2));
+		left: $switch-toggle-gap;
+	}	
 }
 
 @include placeholder(switch-xlarge-base){
-	padding-left: rem-calc($switch-xlarge-width + 5px);
+
+	padding-left: rem-calc(($switch-xlarge-size * 2) + ($switch-xsmall-size / 3));
 
 	&:before{
-		width: rem-calc($switch-xlarge-width);
+		width: rem-calc(($switch-xlarge-size * 2) - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-xlarge-size);
 	}
 
 	&:after{
-		width: rem-calc($switch-xlarge-width /2);
-	}
+		width: rem-calc($switch-xlarge-size - ($switch-toggle-gap * 2));
+		height: rem-calc($switch-xlarge-size - ($switch-toggle-gap * 2));
+		left: $switch-toggle-gap;
+	}	
 }
 
 @include placeholder(switch-checked-xsmall-base){
-	transform: translate(rem-calc(($switch-xsmall-width / 2) - 8px), 0);
+	transform: translate(rem-calc($switch-xsmall-size - ($switch-toggle-gap * 2)), -50%);
 }
 
 @include placeholder(switch-checked-small-base){
-	transform: translate(rem-calc(($switch-small-width / 2) - 8px), 0);
+	transform: translate(rem-calc($switch-small-size - ($switch-toggle-gap * 2)), -50%);
 }
 
 @include placeholder(switch-checked-medium-base){
-	transform: translate(rem-calc(($switch-medium-width / 2) - 8px), 0);
+	transform: translate(rem-calc($switch-medium-size - ($switch-toggle-gap * 2)), -50%);
 }
 
 @include placeholder(switch-checked-large-base){
-	transform: translate(rem-calc(($switch-large-width / 2) - 8px), 0);
+	transform: translate(rem-calc($switch-large-size - ($switch-toggle-gap * 2)), -50%);
 }
 
 @include placeholder(switch-checked-xlarge-base){
-	transform: translate(rem-calc(($switch-xlarge-width / 2) - 8px), 0);
+	transform: translate(rem-calc($switch-xlarge-size - ($switch-toggle-gap * 2)), -50%);
 }
 
 
@@ -139,21 +162,19 @@ $switch-xlarge-width: 70px !default;
 		cursor: pointer;
 
 		&:before, &:after{
+			@extend %e_display-inline-block;
 			@extend %e_position-absolute;
+			@extend %e_center-vertical;
 			content: " ";
-			transition: all 0.15s ease-out;
 		}
 
 		&:before{
-			top: 5px;
 			left: 0;
-			bottom: 5px;
 		}
 
 		&:after{
-			top: 9px;
-			left: 4px;
-			bottom: 9px;
+			content: " ";
+			transition: all 0.15s ease-out;
 		}
 	}
 }
