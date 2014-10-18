@@ -78,10 +78,6 @@ $dropdown-list-default-size: small !default;
 	.expanded li{
 		@extend %list-option-active-#{$skin}-skin;
 		display: block;
-
-		&:first-child:after{
-			display: none;
-		}
 	}
 }
 
