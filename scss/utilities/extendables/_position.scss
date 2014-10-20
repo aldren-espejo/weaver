@@ -6,6 +6,10 @@
 	position: relative;
 }
 
+@include placeholder(e_position-fixed){
+	position: fixed;
+}
+
 @include placeholder(e_center-vertical){
 	top: 50%;
   	transform: translateY(-50%);
