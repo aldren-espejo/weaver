@@ -1,12 +1,15 @@
 ;(function( $, window, document, undefined ) {
 
-  var DropdownList = function( container ){
+  var DropdownList = function( container, value ){
     this.$container = $(container);
     this.$list = $(container).find('.select');
     this.$options = $(container).find('[data-value]');
     this.$current = this.$list.find('li:first-child');
-    this.tempOptions = [];
     this.init();
+
+    if(value){
+      this.select(this.$list.find('li[data-value="'+ value +'"]'));
+    }
   };
 
   DropdownList.prototype = {
@@ -14,12 +17,12 @@
     init: function(){
       var self = this;
 
+      self.setContainerHeight();
       self.$options.each(function(i, el){
-
-        self.tempOptions.push(this);
 
         $(this).click(function(e){
           self.select($(this));
+          self.expand();
           e.stopPropagation();
         });
 
@@ -30,7 +33,6 @@
         self.$list.removeClass('expanded');
       });
 
-      this.setContainerHeight();
     },
 
     select: function(selectedOption){
@@ -38,7 +40,6 @@
       var text = selectedOption.text();
       var value = selectedOption.data('value');
 
-      self.expand();
       self.$current.attr('data-value', value);
       self.$current.text(text);
       self.$container.attr('data-value',value);
@@ -56,14 +57,27 @@
     }
   };
 
-  $.fn.dropdownList = function(){
+  $.fn.dropdownList = function(method, value){
     var self = this;
 
-    return self.each(function(){
-      var dropdownList = new DropdownList( $(this) );
-      $.data(this, 'dropdownList', dropdownList);
+    if(method && !value){
 
-    });
+      switch (method) {
+        case "value":
+          return self.find('.current').data('value');
+
+        case "name":
+         return self.data('name');
+      }
+
+    } else {
+
+      return self.each(function(){
+        var dropdownList = new DropdownList($(this), value);
+        $.data(this, 'dropdownList', dropdownList);
+      });
+    }
+
   };
 
   // Example Usage:
