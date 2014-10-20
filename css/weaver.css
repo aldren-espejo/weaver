@@ -177,6 +177,12 @@ button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role=
 
 @media only screen and (min-width:64.063em) { }
 
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
 [role="switch"] input + label:before, [role="switch"] input + label:after, [role="checkbox"] input + label:before {
   top: 50%;
   transform: translateY(-50%); }
