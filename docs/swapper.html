@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weaver - A Sass based framework</title>
+	<link rel="stylesheet" href="../css/weaver.css">
+</head>
+<body>
+
+	<img class="main-banner-bg" data-swap="../images/space-small.jpg, ../images/space-large.jpg" alt="Discover The City	">
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/modernizr/modernizr.js"></script>
+<script src="../js/dropdown-list.js"></script>
+<script src="../js/swapper.js"></script>
+<script>
+
+	$(function(){
+		$('[data-swap]').swapper();
+	})
+	
+</script>
+</body>
+</html>

@@ -3,14 +3,19 @@
   "dependencies": {
     "sass-list-maps": "~1.0.0",
     "normalize.css": "~3.0.2",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.3"
   },
   "version": "0.1.3",
   "authors": [
     "Aldren Espejo <aldren.espejo@gmail.com>"
   ],
   "description": "Weaver - a sass based framework.",
-  "main": ["js/*","css/*","fonts/proxima-nova/*"],
+  "main": [
+    "js/*",
+    "css/*",
+    "fonts/proxima-nova/*"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
