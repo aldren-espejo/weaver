@@ -24,6 +24,7 @@
       self.$options.not('.current').each(function(i, el){
         $(this).click(function(e){
           self.select($(this));
+          self.expand();
         });
       });
 
