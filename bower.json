@@ -15,7 +15,8 @@
     "js/*",
     "css/*",
     "fonts/proxima-nova/*",
-    "fonts/fontello/*"
+    "fonts/fontello/*",
+    "images/*.*"
   ],
   "license": "MIT",
   "ignore": [
