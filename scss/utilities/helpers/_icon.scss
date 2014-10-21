@@ -1,9 +1,9 @@
 @mixin icon($icon, $size:small, $position:left, $width:null, $height:null) {
 	
-	@extend %e_icon-base;
 	
 	@if $position == left {
 		&:before{
+			@extend %e_icon-base;
 			@extend %e_icon-#{$icon};
 			@extend %e_icon-#{$size};
 			@extend %e_icon-position-left-or-right;
@@ -11,23 +11,26 @@
 
 	} @else if $position == top {
 		&:before{
-				@extend %e_icon-#{$icon};
-				@extend %e_icon-#{$size};
-				@extend %e_icon-position-top-or-bottom;
+			@extend %e_icon-base;
+			@extend %e_icon-#{$icon};
+			@extend %e_icon-#{$size};
+			@extend %e_icon-position-top-or-bottom;
 		}
 
 	} @else if $position == right {
 		&:after{
-				@extend %e_icon-#{$icon};
-				@extend %e_icon-#{$size};
-				@extend %e_icon-position-left-or-right;
+			@extend %e_icon-base;
+			@extend %e_icon-#{$icon};
+			@extend %e_icon-#{$size};
+			@extend %e_icon-position-left-or-right;
 		}
 
 	} @else if $position == bottom {
 		&:after{
-				@extend %e_icon-#{$icon};
-				@extend %e_icon-#{$size};
-				@extend %e_icon-position-top-or-bottom;
+			@extend %e_icon-base;
+			@extend %e_icon-#{$icon};
+			@extend %e_icon-#{$size};
+			@extend %e_icon-position-top-or-bottom;
 		}
 	}
 }
