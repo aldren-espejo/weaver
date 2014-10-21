@@ -15,23 +15,18 @@
 
       self.setContainerHeight();
 
-      self.$list.click(function(e){
+      self.$list.find('.current').click(function(e){
+        self.hideOthers();
         self.expand();
         e.stopPropagation();
-      })
+      });
 
-      self.$options.each(function(i, el){
-
+      self.$options.not('.current').each(function(i, el){
         $(this).click(function(e){
           self.select($(this));
         });
-
       });
 
-      // unexpand if user clicks outside the dropdown list
-      $(document).click(function(){
-        self.$list.removeClass('expanded');
-      });
     },
 
     select: function(selectedOption){
@@ -39,13 +34,22 @@
       var text = selectedOption.text();
       var value = selectedOption.data('value');
 
-      self.$current.empty().text(text);
+      self.$current.text(text);
       self.$current.attr('data-value', value);
     },
 
     expand: function(){
       var self = this;
-      self.$list.toggleClass('expanded');
+      self.$list.toggleClass('in-active-state');
+    },
+
+    hideOthers: function(){
+      var self = this;
+
+      // hide other dropdown list execept this one
+      $('.select.in-active-state').not(self.$list).each(function(){
+        $(this).removeClass('in-active-state');
+      });
     },
 
     setContainerHeight: function(){
@@ -57,10 +61,7 @@
     value: function(value){
       var self = this;
 
-      if(value){
-        self.select(self.$list.find('[data-value="'+ value +'"]').not('.current'));
-      }
-
+      if(value) self.select(self.$list.find('[data-value="'+ value +'"]').not('.current'));
       return self.$current.attr('data-value');
     }
 

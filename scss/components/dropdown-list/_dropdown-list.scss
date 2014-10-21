@@ -12,7 +12,6 @@ $dropdown-list-default-size: small !default;
 @include placeholder(dropdown-list-base){
 	list-style-type: none;
 	width: 100%;
-	position: absolute;
 	z-index: 3;	
 }
 
@@ -45,7 +44,7 @@ $dropdown-list-default-size: small !default;
 		@extend %dropdown-list-base;
 		@extend %dropdown-list-#{$skin}-skin;		
 
-		&.expanded{
+		&.in-active-state{
 			@extend %dropdown-list-expanded;
 			@extend %dropdown-list-expanded-#{$skin}-skin;			
 		}
@@ -75,7 +74,7 @@ $dropdown-list-default-size: small !default;
 		}
 	}
 
-	.expanded li{
+	.in-active-state li{
 		@extend %list-option-active-#{$skin}-skin;
 		display: block;
 	}
