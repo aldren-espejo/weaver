@@ -1,0 +1,13 @@
+.social{
+	.facebook{
+		@include icon(facebook, small, left);
+	}
+
+	.twitter{
+		@include icon(twitter, small, left);
+	}
+
+	.gplus{
+		@include icon(gplus, small, left);
+	}
+}

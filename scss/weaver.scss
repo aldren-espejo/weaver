@@ -7,6 +7,7 @@
 @import "utilities/helpers/placeholder";
 @import "utilities/helpers/clearfix";
 @import "utilities/helpers/filter";
+@import "utilities/helpers/icon";
 @import "utilities/extendables/field";
 @import "utilities/extendables/display";
 @import "utilities/extendables/position";
@@ -14,6 +15,7 @@
 @import "utilities/extendables/list";
 @import "utilities/extendables/utils";
 @import "utilities/extendables/font";
+@import "utilities/extendables/icon";
 
 @import "global-vars";
 @import "components/dropdown-list/dropdown-list";
@@ -27,3 +29,4 @@
 @import "docs/dropdown-list";
 @import "docs/inputbox";
 @import "docs/button";
+@import "docs/icons";

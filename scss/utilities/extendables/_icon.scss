@@ -1,0 +1,91 @@
+@include placeholder(e_icon-base){
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+@include placeholder(e_icon-ok){
+	content: '\e800'; 
+}
+@include placeholder(e_icon-github){
+	content: '\e801'; 
+}
+@include placeholder(e_icon-flickr){
+	content: '\e802'; 
+}
+@include placeholder(e_icon-vimeo){
+	content: '\e803'; 
+}
+@include placeholder(e_icon-twitter){
+	content: '\e804'; 
+}
+@include placeholder(e_icon-facebook){
+	content: '\e805'; 
+}
+@include placeholder(e_icon-gplus){
+	content: '\e806'; 
+}
+@include placeholder(e_icon-pinterest){
+	content: '\e807'; 
+}
+@include placeholder(e_icon-tumblr){
+	content: '\e808'; 
+}
+@include placeholder(e_icon-linkedin){
+	content: '\e809'; 
+}
+@include placeholder(e_icon-dribbble){
+	content: '\e80a'; 
+}
+
+@include placeholder(e_icon-tiny){
+	font-size: rem-calc(19);
+}
+
+@include placeholder(e_icon-small){
+	font-size: rem-calc(24);
+}
+
+@include placeholder(e_icon-medium){
+	font-size: rem-calc(32);
+}
+
+@include placeholder(e_icon-large){
+	font-size: rem-calc(56);
+}
+
+@include placeholder(e_icon-position-left-or-right){
+	vertical-align: middle;
+	margin: 0 4px;
+}
+
+@include placeholder(e_icon-position-top-or-bottom){
+	vertical-align: top;
+	display: block;
+	margin: 4px auto;
+}
