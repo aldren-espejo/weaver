@@ -25,6 +25,7 @@
         $(this).click(function(e){
           self.select($(this));
           self.expand();
+          e.stopPropagation();
         });
       });
 
