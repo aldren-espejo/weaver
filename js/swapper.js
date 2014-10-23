@@ -1,24 +1,17 @@
 ;(function( $, window, document, undefined ) {
 
-  var Swapper = function(el){
+  var Swapper = function(el, options){
     this.$el = $(el);
+    this.options = $.extend({}, $.fn.swapper.defaults, options);
     this.data = this.$el.data('swap').split(',');
     this.breakpoints = {
       small: 'only screen',
       medium: 'only screen and (min-width:40.063em)',
       large: 'only screen and (min-width:64.063em)'
-    }
-
-    Object.prototype.keys = function() {    
-      return Object.keys(this);
-    }
-
-    Object.prototype.values = function() {    
-      return this.keys().map(function(key){ return this[key]; }, this);
-    }
+    };
 
     this.init();
-  }
+  };
 
   Swapper.prototype = {
 
@@ -29,20 +22,22 @@
       
       $(window).resize(function(){
         self.swap();
-      })
+      });
     },
 
     swap: function(){
       var self = this;
-      var dataLength = self.data.length;
+      var breakpoints = Object.keys(self.breakpoints).map(function(key) { return self.breakpoints[key] });
 
-      for(var i = 0; i < dataLength; i++){
-        if(Modernizr.mq(self.breakpoints.values()[i])){
+      for(var i = 0; i < self.data.length; i++){
+        if(Modernizr.mq(breakpoints[i])){
           if(self.elemType() === 'src') {
             self.$el.attr('src', self.data[i]);
           }
         }
       }
+
+     self.options.afterLoad.call(this);
     },
 
     elemType: function(){
@@ -53,15 +48,19 @@
     }
   }
 
-  $.fn.swapper = function(){
+  $.fn.swapper = function(options){
     var self = this;
 
     return self.each(function(){
-      var instance = new Swapper(this);
+      var instance = new Swapper(this, options);
       $.data(this, 'swapper', instance);
     });
 
   }
+
+  $.fn.swapper.defaults = {
+    afterLoad: function(){}
+  }  
 
   // Example Usage:
   // $('[data-swap]').swapper();
