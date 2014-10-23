@@ -4,6 +4,9 @@ $primary-color: #007aff !default;
 $danger-color: #ea0808 !default;
 $warning-color: #e2b003 !default;
 $loud-color: #2eb000 !default;
+$regular-font: 'Arial' !default;
+$semi-bold-font: 'Arial' !default;
+$bold-font: 'Arial Black' !default;
 
 // variables that control form field padding
 $field-padding-xsmall: rem-calc(8 12) !default;
@@ -20,11 +23,12 @@ $field-text-large: rem-calc(18) !default;
 $field-text-xlarge: rem-calc(20) !default;
 
 // variables that control type text size
-$type-text-xsmall: rem-calc(11) !default;
-$type-text-small: rem-calc(14) !default;
-$type-text-medium: rem-calc(18) !default;
-$type-text-large: rem-calc(36) !default;
-$type-text-xlarge: rem-calc(48) !default;
+$type-text-xsmall: 11px !default;
+$type-text-small: 14px !default;
+$type-text-medium: 22px !default;
+$type-text-large: 36px !default;
+$type-text-xlarge: 48px !default;
+$type-text-huge: 70px !default;
 
 // media breakpoints mapping
 $small-range: ('0em', '40em') !default;

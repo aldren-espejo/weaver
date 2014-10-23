@@ -1,27 +1,35 @@
 @include placeholder(e_font-size-xlarge){
-	font-size: $type-text-xlarge;
+	font-size: rem-calc($type-text-xlarge);
 }
 
 @include placeholder(e_font-size-large){
-	font-size: $type-text-large;
+	font-size: rem-calc($type-text-large);
 }
 
 @include placeholder(e_font-size-medium){
-	font-size: $type-text-medium;
+	font-size: rem-calc($type-text-medium);
 }
 
 @include placeholder(e_font-size-small){
-	font-size: $type-text-small;
+	font-size: rem-calc($type-text-small);
 }
 
 @include placeholder(e_font-size-xsmall){
-	font-size: $type-text-xsmall;
+	font-size: rem-calc($type-text-xsmall);
+}
+
+@include placeholder(e_font-size-huge){
+	font-size: rem-calc($type-text-huge);
 }
 
 @include placeholder(e_font-family-regular){
-	font-family: "proxima_nova_regular";
+	font-family: $regular-font;
 }
 
 @include placeholder(e_font-family-semi-bold){
-	font-family: "proxima_nova_semi_bold";
+	font-family: $semi-bold-font;
+}
+
+@include placeholder(e_font-family-bold){
+	font-family: $bold-font;
 }

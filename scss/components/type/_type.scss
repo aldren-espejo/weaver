@@ -2,31 +2,31 @@
 
 h1{
 	@extend %e_font-size-xlarge;
-	@extend %e_font-family-semi-bold;
+	@extend %e_font-family-bold;
 	margin: rem-calc(0 0 10);
 }
 
 h2{
 	@extend %e_font-size-large;
-	@extend %e_font-family-semi-bold;
+	@extend %e_font-family-bold;
 	margin: rem-calc(0 0 7);
 }
 
 h3{
 	@extend %e_font-size-medium;
-	@extend %e_font-family-semi-bold;
+	@extend %e_font-family-bold;
 	margin: rem-calc(0 0 6);
 }
 
 h4{
 	@extend %e_font-size-small;
-	@extend %e_font-family-semi-bold;
+	@extend %e_font-family-bold;
 	margin: rem-calc(0 0 4);
 }
 
 h5,h6{
 	@extend %e_font-size-xsmall;
-	@extend %e_font-family-semi-bold;
+	@extend %e_font-family-bold;
 	margin: rem-calc(0 0 2);
 }
 
