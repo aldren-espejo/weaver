@@ -1,28 +1,4 @@
 @font-face {
-    font-family: 'proxima_nova_regular';
-    src: url('../fonts/proxima-nova/proximanova-regular-webfont.eot');
-    src: url('../fonts/proxima-nova/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proxima-nova/proximanova-regular-webfont.woff') format('woff'),
-         url('../fonts/proxima-nova/proximanova-regular-webfont.ttf') format('truetype'),
-         url('../fonts/proxima-nova/proximanova-regular-webfont.svg#mrs_sheppardsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'proxima_nova_semi_bold';
-    src: url('../fonts/proxima-nova/proximanova-semibold-webfont.eot');
-    src: url('../fonts/proxima-nova/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proxima-nova/proximanova-semibold-webfont.woff') format('woff'),
-         url('../fonts/proxima-nova/proximanova-semibold-webfont.ttf') format('truetype'),
-         url('../fonts/proxima-nova/proximanova-semibold-webfont.svg#mrs_sheppardsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello/fontello.eot?95280209');
   src: url('../fonts/fontello/fontello.eot?95280209#iefix') format('embedded-opentype'),
@@ -31,4 +7,26 @@
        url('../fonts/fontello/fontello.svg?95280209#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat_regular';
+    src: url('../fonts/montserrat/Montserrat-Regular-webfont.eot');
+    src: url('../fonts/montserrat/Montserrat-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat/Montserrat-Regular-webfont.svg#mrs_sheppardsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat_bold';
+    src: url('../fonts/montserrat/Montserrat-Bold-webfont.eot');
+    src: url('../fonts/montserrat/Montserrat-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Bold-webfont.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat/Montserrat-Bold-webfont.svg#mrs_sheppardsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }

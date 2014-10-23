@@ -35,23 +35,23 @@ img {
   max-width: 100%; }
 
 @font-face {
-  font-family: 'proxima_nova_regular';
-  src: url('../fonts/proxima-nova/proximanova-regular-webfont.eot');
-  src: url('../fonts/proxima-nova/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima-nova/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proxima-nova/proximanova-regular-webfont.ttf') format('truetype'), url('../fonts/proxima-nova/proximanova-regular-webfont.svg#mrs_sheppardsregular') format('svg');
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'proxima_nova_semi_bold';
-  src: url('../fonts/proxima-nova/proximanova-semibold-webfont.eot');
-  src: url('../fonts/proxima-nova/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima-nova/proximanova-semibold-webfont.woff') format('woff'), url('../fonts/proxima-nova/proximanova-semibold-webfont.ttf') format('truetype'), url('../fonts/proxima-nova/proximanova-semibold-webfont.svg#mrs_sheppardsregular') format('svg');
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello/fontello.eot?95280209');
   src: url('../fonts/fontello/fontello.eot?95280209#iefix') format('embedded-opentype'), url('../fonts/fontello/fontello.woff?95280209') format('woff'), url('../fonts/fontello/fontello.ttf?95280209') format('truetype'), url('../fonts/fontello/fontello.svg?95280209#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat_regular';
+  src: url('../fonts/montserrat/Montserrat-Regular-webfont.eot');
+  src: url('../fonts/montserrat/Montserrat-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat/Montserrat-Regular-webfont.woff') format('woff'), url('../fonts/montserrat/Montserrat-Regular-webfont.ttf') format('truetype'), url('../fonts/montserrat/Montserrat-Regular-webfont.svg#mrs_sheppardsregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat_bold';
+  src: url('../fonts/montserrat/Montserrat-Bold-webfont.eot');
+  src: url('../fonts/montserrat/Montserrat-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat/Montserrat-Bold-webfont.woff') format('woff'), url('../fonts/montserrat/Montserrat-Bold-webfont.ttf') format('truetype'), url('../fonts/montserrat/Montserrat-Bold-webfont.svg#mrs_sheppardsregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -257,26 +257,8 @@ button, [class^="btn-"], [class*=" btn-"] {
 
 @media only screen and (min-width:64.063em) { }
 
-h1 {
-  font-size: 3.4285714286rem; }
-
-@media only screen { }
-
-@media only screen and (min-width:40.063em) { }
-
-@media only screen and (min-width:64.063em) { }
-
-h2 {
-  font-size: 2.5714285714rem; }
-
-@media only screen { }
-
-@media only screen and (min-width:40.063em) { }
-
-@media only screen and (min-width:64.063em) { }
-
-h3 {
-  font-size: 1.5714285714rem; }
+h5, h6 {
+  font-size: 0.7857142857rem; }
 
 @media only screen { }
 
@@ -293,8 +275,26 @@ h4 {
 
 @media only screen and (min-width:64.063em) { }
 
-h5, h6 {
-  font-size: 0.7857142857rem; }
+h3 {
+  font-size: 1.2857142857rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h2 {
+  font-size: 1.7142857143rem; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+h1 {
+  font-size: 2.2857142857rem; }
 
 @media only screen { }
 
@@ -309,7 +309,7 @@ h5, h6 {
 @media only screen and (min-width:64.063em) { }
 
 a, p {
-  font-family: 'Arial'; }
+  font-family: "montserrat_regular"; }
 
 @media only screen { }
 
@@ -324,7 +324,7 @@ a, p {
 @media only screen and (min-width:64.063em) { }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arial Black'; }
+  font-family: "montserrat_bold"; }
 
 @media only screen { }
 
@@ -659,8 +659,7 @@ h1, h2, h3, h4, h5, h6 {
 
 [role="dropdown-list"] .select, .drpdwn-sample1 .select, .drpdwn-sample2 .select, .drpdwn-sample3 .select, .drpdwn-sample5 .select, .drpdwn-sample5 .select {
   list-style-type: none;
-  width: 100%;
-  z-index: 999; }
+  width: 100%; }
 
 @media only screen { }
 
