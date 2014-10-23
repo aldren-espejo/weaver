@@ -13,7 +13,6 @@
   "description": "Weaver - a sass based framework.",
   "main": [
     "js/*",
-    "css/*",
     "fonts/proxima-nova/*",
     "fonts/fontello/*",
     "images/*.*"
