@@ -175,7 +175,7 @@ button, [class^="btn-"], [class*=" btn-"], [role="switch"] input + label, [role=
 
 @media only screen and (min-width:64.063em) { }
 
-[role="switch"] input + label, [role="checkbox"] input + label {
+[role="dropdown-list"] .select.in-active-state, .drpdwn-sample1 .select.in-active-state, .drpdwn-sample2 .select.in-active-state, .drpdwn-sample3 .select.in-active-state, .drpdwn-sample5 .select.in-active-state, .drpdwn-sample5 .select.in-active-state, [role="switch"] input + label, [role="checkbox"] input + label {
   position: relative; }
 
 @media only screen { }
@@ -660,6 +660,15 @@ h1, h2, h3, h4, h5, h6 {
 [role="dropdown-list"] .select, .drpdwn-sample1 .select, .drpdwn-sample2 .select, .drpdwn-sample3 .select, .drpdwn-sample5 .select, .drpdwn-sample5 .select {
   list-style-type: none;
   width: 100%; }
+
+@media only screen { }
+
+@media only screen and (min-width:40.063em) { }
+
+@media only screen and (min-width:64.063em) { }
+
+[role="dropdown-list"] .select.in-active-state, .drpdwn-sample1 .select.in-active-state, .drpdwn-sample2 .select.in-active-state, .drpdwn-sample3 .select.in-active-state, .drpdwn-sample5 .select.in-active-state, .drpdwn-sample5 .select.in-active-state {
+  z-index: 9999; }
 
 @media only screen { }
 

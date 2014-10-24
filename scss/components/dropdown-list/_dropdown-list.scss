@@ -6,8 +6,12 @@ $dropdown-list-default-size: small !default;
 
 @include placeholder(dropdown-list-base){
 	list-style-type: none;
-	width: 100%;
-	z-index: 999;	
+	width: 100%;	
+}
+
+@include placeholder(dropdown-list-expanded){
+	@extend %e_position-relative;
+	z-index: 9999;
 }
 
 @include placeholder(dropdown-list-option-base){
@@ -40,6 +44,7 @@ $dropdown-list-default-size: small !default;
 		@extend %dropdown-list-#{$skin}-skin;		
 
 		&.in-active-state{
+			@extend %dropdown-list-expanded;
 			@extend %dropdown-list-expanded-#{$skin}-skin;			
 		}
 	}

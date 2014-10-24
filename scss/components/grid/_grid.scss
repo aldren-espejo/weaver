@@ -60,7 +60,10 @@ $default-gutters: rem-calc( 0 ($column-gutter/2) ) !default;
 				$with: "-with-gutters";
 			}
 		} @else {
-			padding: rem-calc($padding);
+
+			@media #{map-get($breakpoints, $breakpoint)}{
+				padding: rem-calc($padding);
+			}
 		}
 	}
 
