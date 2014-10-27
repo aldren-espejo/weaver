@@ -1,16 +1,16 @@
-$button-bg: $warning-color;
-$button-color: #fff;
-$button-border: 1px solid darken($button-bg, 10%);
+$warning-button-bg: $warning-color !default;
+$warning-button-color: #fff !default;
+$warning-button-border: 1px solid darken($warning-button-bg, 10%) !default;
 
 @mixin components_button_skin_warning($b){
 
-	%button-warning-skin-{$b}{
-		background: $button-bg;
-		color: $button-color;
-		border: $button-border;
+	%button-warning-skin-#{$b}{
+		background: $warning-button-bg;
+		color: $warning-button-color;
+		border: $warning-button-border;
 	}
 
-	%button-hover-warning-skin-{$b}{
-		background: darken($button-bg, 10%);
+	%button-hover-warning-skin-#{$b}{
+		background: darken($warning-button-bg, 10%);
 	}	
 }

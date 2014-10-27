@@ -1,21 +1,23 @@
-// can be overwritten
-$button-default-skin: default !default;
-$button-default-size: small !default;
+@mixin button($size: null, $skin: null){
+	
+	@if $skin {
+		@extend %button-#{$skin}-skin-#{$current-breakpoint};
 
-@mixin button($size: null, $skin: null, $breakpoint: small){
-	@extend %button-#{$skin}-skin-{$breakpoint};
-	@extend %e_padding-#{$size}-{$breakpoint};
-	@extend %e_text-#{$size}-{$breakpoint};
+		&:hover{
+			@extend %button-hover-#{$skin}-skin-#{$current-breakpoint};
+		}		
+	}
 
-	&:hover{
-		@extend %button-hover-#{$skin}-skin-{$breakpoint};
+	@if $size {
+		@extend %e_padding-#{$size}-#{$current-breakpoint};
+		@extend %e_text-#{$size}-#{$current-breakpoint};		
 	}
 }
 
 button, [class^="btn-"], [class*=" btn-"]{
-	@include button($button-default-size, $button-default-skin);
-	@extend %e_display-inline-block-{$breakpoint};
-	@extend %e_text-align-center-{$breakpoint};
+
+	@extend %e_display-inline-block-#{$current-breakpoint};
+	@extend %e_text-align-center-#{$current-breakpoint};
 	cursor: pointer;
 	text-decoration: none;
 	-webkit-appearance: none;

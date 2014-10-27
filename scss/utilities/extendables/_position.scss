@@ -1,18 +1,18 @@
 @mixin utilities_extendables_position($b){
 
-	%e_position-absolute-{$b}{
+	%e_position-absolute-#{$b}{
 		position: absolute;
 	}
 
-	%e_position-relative-{$b}{
+	%e_position-relative-#{$b}{
 		position: relative;
 	}
 
-	%e_position-fixed-{$b}{
+	%e_position-fixed-#{$b}{
 		position: fixed;
 	}
 
-	%e_center-vertical-{$b}{
+	%e_center-vertical-#{$b}{
 		top: 50%;
 	  	transform: translateY(-50%);
 	}	

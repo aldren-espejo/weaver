@@ -1,38 +1,33 @@
-@import "skins/default";
-
-// can be overwritten
-$dropdown-list-default-skin: default !default;
-$dropdown-list-default-size: small !default;
-
 @mixin components_dropdown-list_dropdown-list($b){
 
-	%dropdown-list-base-{$b}{
+	%dropdown-list-base-#{$b}{
 		list-style-type: none;
-		width: 100%;	
+		width: 100%;
+		padding: 0;
 	}
 
-	%dropdown-list-expanded-{$b}{
-		@extend %e_position-relative;
+	%dropdown-list-expanded-#{$b}{
+		@extend %e_position-relative-#{$b};
 		z-index: 9999;
 	}
 
-	%dropdown-list-option-base-{$b}{
+	%dropdown-list-option-base-#{$b}{
 		display: none;
 		padding-right: 30px;
 		cursor: pointer;
 		transition: background 200ms ease-out;
 	}
 
-	%dropdown-list-option-show-{$b}{
+	%dropdown-list-option-show-#{$b}{
 		position: relative;
 		display: block;	
 	}
 
-	%drop-icon-base-{$b}{
+	%drop-icon-base-#{$b}{
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		content: " ";	
+		content: " ";
 	}	
 }
 
@@ -40,49 +35,67 @@ $dropdown-list-default-size: small !default;
 // helper for creating a dropdown list
 @mixin dropdown-list($size: null, $skin: null, $float: left){
 
-	position: relative;
 
-	.select{
-		@extend %dropdown-list-base;
-		@extend %dropdown-list-#{$skin}-skin;		
-
-		&.in-active-state{
-			@extend %dropdown-list-expanded;
-			@extend %dropdown-list-expanded-#{$skin}-skin;			
-		}
+	@if $size {
+		li{
+			@extend %e_padding-#{$size}-#{$current-breakpoint};
+			@extend %e_text-#{$size}-#{$current-breakpoint};
+		}	
 	}
 
-	li{
-		@extend %dropdown-list-option-base;
-		@extend %list-option-#{$skin}-skin;
-		
-		@if $size {
-			@extend %e_padding-#{$size};
-			@extend %e_text-#{$size};
+	@if $skin{
+		.select{
+			@extend %dropdown-list-#{$skin}-skin-#{$current-breakpoint};		
+
+			&.in-active-state{
+				@extend %dropdown-list-expanded-#{$skin}-skin-#{$current-breakpoint};			
+			}
 		}
 
-		&:first-child{
-			@extend %dropdown-list-option-show;
+		li{
+			@extend %list-option-#{$skin}-skin-#{$current-breakpoint};
 
-			&:after{
-				@extend %drop-icon-base;
-				@extend %drop-icon-#{$skin}-skin;
-				@extend %drop-icon-#{$skin}-#{$size};
-			}			
-		}		
+			&:first-child:after{
+				@extend %drop-icon-#{$skin}-skin-#{$current-breakpoint};	
+				@extend %drop-icon-#{$skin}-#{$size}-#{$current-breakpoint};
+			}		
 
-		&:hover{
-			@extend %list-option-hover-#{$skin}-skin;
+			&:hover{
+				@extend %list-option-hover-#{$skin}-skin-#{$current-breakpoint};
+			}
+		}
+
+		.in-active-state li{
+			@extend %list-option-active-#{$skin}-skin-#{$current-breakpoint};
+		}				
+	}
+
+}
+
+[role="dropdown-list"]{
+	@extend %e_position-relative-#{$current-breakpoint};
+	
+	.select{
+		@extend %dropdown-list-base-#{$current-breakpoint};
+
+		&.in-active-state{
+			@extend %dropdown-list-expanded-#{$current-breakpoint};		
 		}
 	}
 
 	.in-active-state li{
-		@extend %list-option-active-#{$skin}-skin;
 		display: block;
 	}
-}
 
-[role="dropdown-list"]{
-	@include dropdown-list($dropdown-list-default-size, $dropdown-list-default-skin);
+	li{
+		@extend %dropdown-list-option-base-#{$current-breakpoint};
 
+		&:first-child{
+			@extend %dropdown-list-option-show-#{$current-breakpoint};
+
+			&:after{
+				@extend %drop-icon-base-#{$current-breakpoint};
+			}			
+		}		
+	}	
 }

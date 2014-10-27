@@ -1,16 +1,16 @@
-$button-bg: $loud-color;
-$button-color: #fff;
-$button-border: 1px solid darken($button-bg, 10%);
+$loud-button-bg: $loud-color !default;
+$loud-button-color: #fff !default;
+$loud-button-border: 1px solid darken($loud-button-bg, 10%) !default;
 
 @mixin components_button_skins_loud($b){
 
-	%button-loud-skin-{$b}{
-		background: $button-bg;
-		color: $button-color;
-		border: $button-border;
+	%button-loud-skin-#{$b}{
+		background: $loud-button-bg;
+		color: $loud-button-color;
+		border: $loud-button-border;
 	}
 
-	%button-hover-loud-skin-{$b}{
-		background: darken($button-bg, 10%);
+	%button-hover-loud-skin-#{$b}{
+		background: darken($loud-button-bg, 10%);
 	}	
 }

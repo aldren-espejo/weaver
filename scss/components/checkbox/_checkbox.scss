@@ -1,10 +1,3 @@
-@import "skins/default";
-@import "skins/rounded";
-
-// can be overwritten
-$checkbox-default-skin: rounded !default;
-$checkbox-default-size: small !default;
-
 $checkbox-xsmall-size: 15px !default;
 $checkbox-small-size: 23px !default;
 $checkbox-medium-size: 28px !default;
@@ -13,7 +6,7 @@ $checkbox-xlarge-size: 34px !default;
 
 @mixin components_checkbox_checkbox($b){
 
-	%checkbox-xsmall-base-{$b}{
+	%checkbox-xsmall-base-#{$b}{
 		
 		padding-left: rem-calc(($checkbox-xsmall-size) + ($checkbox-xsmall-size / 3));
 
@@ -23,7 +16,7 @@ $checkbox-xlarge-size: 34px !default;
 		}	
 	}
 
-	%checkbox-small-base-{$b}{
+	%checkbox-small-base-#{$b}{
 
 		padding-left: rem-calc(($checkbox-small-size) + ($checkbox-small-size / 3));
 
@@ -33,7 +26,7 @@ $checkbox-xlarge-size: 34px !default;
 		}
 	}
 
-	%checkbox-medium-base-{$b}{
+	%checkbox-medium-base-#{$b}{
 
 		padding-left: rem-calc(($checkbox-medium-size) + ($checkbox-medium-size / 3));
 
@@ -43,7 +36,7 @@ $checkbox-xlarge-size: 34px !default;
 		}	
 	}
 
-	%checkbox-large-base-{$b}{
+	%checkbox-large-base-#{$b}{
 
 		padding-left: rem-calc(($checkbox-large-size) + ($checkbox-large-size / 3));
 
@@ -53,7 +46,7 @@ $checkbox-xlarge-size: 34px !default;
 		}	
 	}
 
-	%checkbox-xlarge-base-{$b}{
+	%checkbox-xlarge-base-#{$b}{
 
 		padding-left: rem-calc(($checkbox-xlarge-size) + ($checkbox-xlarge-size / 3));
 
@@ -65,50 +58,50 @@ $checkbox-xlarge-size: 34px !default;
 }
 
 
+@mixin checkbox($size: null, $skin: null){
 
-@mixin checkbox($size: null, $skin: null, $breakpoint: small){
+	@if $size{
+		input + label{
+			@extend %e_padding-#{$size}-#{$current-breakpoint};
+			@extend %e_text-#{$size}-#{$current-breakpoint};
+			@extend %checkbox-#{$size}-base-#{$current-breakpoint};
 
-	input + label{
-		@extend %e_position-relative-{$breakpoint};
-		@extend %e_padding-#{$size}-{$breakpoint};
-		@extend %e_text-#{$size}-{$breakpoint};
-		@extend %checkbox-#{$size}-base-{$breakpoint};
-	
-		&:before{
-			@extend %checkbox-#{$skin}-skin;
 		}
 	}
 
-	input:checked + label{
-
-		&:before{
-			@extend %checkbox-checked-#{$skin}-skin-{$breakpoint};
+	@if $skin{
+		input + label:before{
+			@extend %checkbox-#{$skin}-skin-#{$current-breakpoint};
 		}
+
+		input:checked + label{
+
+			&:before{
+				@extend %checkbox-checked-#{$skin}-skin-#{$current-breakpoint};
+			}
+		}		
 	}
 	
-}
-
-
-[role="checkbox"]{
-	@include checkbox($checkbox-default-size, $checkbox-default-skin);
 }
 
 
 [role="checkbox"] input{
-	@extend %e_position-absolute;
+
+	@extend %e_position-absolute-#{$current-breakpoint};
 	top:0;
 	left: 5px;
 	padding: 0;
 	opacity: 0;
 
 	& + label {
-		@extend %e_display-inline-block;
+		@extend %e_position-relative-#{$current-breakpoint};
+		@extend %e_display-inline-block-#{$current-breakpoint};
 		cursor: pointer;
 
 		&:before{
-			@extend %e_display-inline-block;
-			@extend %e_position-absolute;
-			@extend %e_center-vertical;
+			@extend %e_display-inline-block-#{$current-breakpoint};
+			@extend %e_position-absolute-#{$current-breakpoint};
+			@extend %e_center-vertical-#{$current-breakpoint};
 			content: " ";
 			left: 0;
 			transition: background-color 0.15s ease-out;

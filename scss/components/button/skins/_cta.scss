@@ -1,16 +1,16 @@
-$button-bg: $primary-color;
-$button-color: #fff;
-$button-border: 1px solid darken($button-bg, 10%);
+$cta-button-bg: $primary-color !default;
+$cta-button-color: #fff !default;
+$cta-button-border: 1px solid darken($cta-button-bg, 10%) !default;
 
 @mixin components_button_skin_cta($b){
 
-	%button-cta-skin-{$b}{
-		background: $button-bg;
-		color: $button-color;
-		border: $button-border;
+	%button-cta-skin-#{$b}{
+		background: $cta-button-bg;
+		color: $cta-button-color;
+		border: $cta-button-border;
 	}
 
-	%button-hover-cta-skin-{$b}{
-		background: darken($button-bg, 10%);
+	%button-hover-cta-skin-#{$b}{
+		background: darken($cta-button-bg, 10%);
 	}	
 }

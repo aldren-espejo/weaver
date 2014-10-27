@@ -1,16 +1,16 @@
-$button-bg: #444 !default;
-$button-color: #fff !default;
-$button-border: 1px solid darken($button-bg, 10%);
+$default-button-bg: #444 !default;
+$default-button-color: #fff !default;
+$default-button-border: 1px solid darken($default-button-bg, 10%) !default;
 
 @mixin components_button_skins_default($b){
 
-	%button-default-skin-{$b}{
-		background: $button-bg;
-		color: $button-color;
-		border: $button-border;
+	%button-default-skin-#{$b}{
+		background: $default-button-bg;
+		color: $default-button-color;
+		border: $default-button-border;
 	}
 
-	%button-hover-default-skin-{$b}{
-		background: darken($button-bg, 10%);
+	%button-hover-default-skin-#{$b}{
+		background: darken($default-button-bg, 10%);
 	}	
 }

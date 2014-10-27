@@ -1,5 +1,5 @@
 .sample1{
-	@include input(xsmall);
+	@include input(xsmall, default);
 }
 
 .sample2{

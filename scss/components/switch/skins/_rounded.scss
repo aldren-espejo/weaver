@@ -1,18 +1,21 @@
-$switch-bg: #aaa;
-$toggle-bg: #fff;
-$switch-checked-bg: $primary-color;
-$switch-radius: rem-calc(50);
+$default-switch-bg: #aaa;
+$default-toggle-bg: #fff;
+$default-switch-checked-bg: $primary-color;
+$default-switch-radius: rem-calc(50);
 
-@include placeholder(switch-rounded-skin){
-	background: $switch-bg;
-	border-radius: $switch-radius;
-}
+@mixin components_switch_skins_rounded($b){
 
-@include placeholder(switch-checked-rounded-skin){
-	background: $switch-checked-bg;
-}
+	%switch-rounded-skin-#{$b}{
+		background: $default-switch-bg;
+		border-radius: $default-switch-radius;
+	}
 
-@include placeholder(switch-toggle-rounded-skin){
-	background: $toggle-bg;
-	border-radius: $switch-radius;
+	%switch-checked-rounded-skin-#{$b}{
+		background: $default-switch-checked-bg;
+	}
+
+	%switch-toggle-rounded-skin-#{$b}{
+		background: $default-toggle-bg;
+		border-radius: $default-switch-radius;
+	}	
 }

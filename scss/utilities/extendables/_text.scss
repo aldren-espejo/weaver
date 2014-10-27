@@ -1,26 +1,26 @@
 @mixin utilities_extendables_text($b){
 
-	%e_text-align-center-{$b}{
+	%e_text-align-center-#{$b}{
 		text-align: center;
 	}
 
-	%e_text-align-left-{$b}{
+	%e_text-align-left-#{$b}{
 		text-align: left;
 	}
 
-	%e_text-align-right-{$b}{
+	%e_text-align-right-#{$b}{
 		text-align: right;
 	}
 
-	%e_text-transform-uppercase-{$b}{
+	%e_text-transform-uppercase-#{$b}{
 		text-transform: uppercase; 
 	}
 
-	%e_text-color-white-{$b}{
+	%e_text-color-white-#{$b}{
 		color: #fff;
 	}
 
-	%e_decoration-underline-{$b}{
+	%e_decoration-underline-#{$b}{
 		text-decoration: underline;
 	}	
 }

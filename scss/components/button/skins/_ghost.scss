@@ -1,16 +1,16 @@
-$button-bg: rgba(0,0,0,0);
-$button-color: #fff;
-$button-border: 1px solid #fff;
+$ghost-button-bg: rgba(0,0,0,0) !default;
+$ghost-button-color: #fff !default;
+$ghost-button-border: 1px solid #fff !default;
 
 @mixin components_button_skins_ghost($b){
 
-	%button-ghost-skin-{$b}{
-		background: $button-bg;
-		color: $button-color;
-		border: $button-border;
+	%button-ghost-skin-#{$b}{
+		background: $ghost-button-bg;
+		color: $ghost-button-color;
+		border: $ghost-button-border;
 	}
 
-	%button-hover-ghost-skin-{$b}{
+	%button-hover-ghost-skin-#{$b}{
 		background: rgba(0,0,0,0.1);
 	}	
 }

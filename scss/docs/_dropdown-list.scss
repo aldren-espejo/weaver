@@ -1,33 +1,22 @@
 .drpdwn-sample1{
-	@include grid-lrg(1);
-	@include dropdown-list(xsmall);
+	@include grid-large(3);
+	@include dropdown-list(small, default);
+
+	@include breakpoint(large){
+		@include dropdown-list(large);
+	}
 }
 
 .drpdwn-sample2{
-	@include grid-lrg(1);
+	@include grid-large(1);
 	@include dropdown-list(small);
 }
 
 .drpdwn-sample3{
-	@include grid-lrg(1);
+	@include grid-large(1);
 	@include dropdown-list(medium);
 }
 
 .drpdwn-sample4{
-	@include grid-lrg(1);
-}
-
-
-@media #{$medium-up}{
-	.drpdwn-sample5{
-		@include grid-med(2);
-		@include dropdown-list(large);
-	}	
-}
-
-@media #{$large-up}{
-.drpdwn-sample5{
-	@include grid-lrg(2);
-	@include dropdown-list(xlarge);
-}	
+	@include grid-large(1);
 }

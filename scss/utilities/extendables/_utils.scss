@@ -1,11 +1,11 @@
 @mixin utilities_extendables_utils($b){
 
-	%e_centered-{$b}{
+	%e_centered-#{$b}{
 		margin: 0 auto;
 		float: none !important;
 	}
 
-	%e_rounded-right-side-{$b}{
+	%e_rounded-right-side-#{$b}{
 		border-radius: 0 2px 2px 0;
 	}	
 }

@@ -1,15 +1,20 @@
-$switch-bg: #888;
-$toggle-bg: #fff;
-$switch-checked-bg: $primary-color;
+$default-switch-bg: #888;
+$default-toggle-bg: #fff;
+$default-switch-checked-bg: $primary-color;
 
-@include placeholder(switch-default-skin){
-	background: $switch-bg;
-}
+@mixin components_switch_skins_default($b){
 
-@include placeholder(switch-checked-default-skin){
-	background: $switch-checked-bg;
-}
+	%switch-default-skin-#{$b}{
+		background: $default-switch-bg;
+		border-radius: 0;
+	}
 
-@include placeholder(switch-toggle-default-skin){
-	background: $toggle-bg;
+	%switch-checked-default-skin-#{$b}{
+		background: $default-switch-checked-bg;
+	}
+
+	%switch-toggle-default-skin-#{$b}{
+		background: $default-toggle-bg;
+		border-radius: 0;
+	}	
 }

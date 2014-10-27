@@ -1,0 +1,10 @@
+@mixin breakpoint($breakpoint){
+	
+	// set breakpoint to use
+	$current-breakpoint: $breakpoint;
+
+	@content;
+
+	// reset to default breakpoint
+	$current-breakpoint: $default-breakpoint;
+}

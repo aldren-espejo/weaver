@@ -1,20 +1,21 @@
-@import "skins/default";
-
-// can be overwritten
-$inputbox-default-skin: default !default;
-$inputbox-default-size: small !default;
-
 @mixin input($size: null, $skin: null){
 
-	input{
-    @extend %e_padding-#{$size};
-    @extend %e_text-#{$size};
-		@extend %inputbox-#{$skin}-skin;
+  @if $size{
+    input{
+      @extend %e_padding-#{$size}-#{$current-breakpoint};
+      @extend %e_text-#{$size}-#{$current-breakpoint};
+    }
+  }
 
-		&:focus{
-			@extend %inputbox-focus-#{$skin}-skin;
-  	}
-	}
+  @if $skin{
+    input{
+      @extend %inputbox-#{$skin}-skin-#{$current-breakpoint};
+
+      &:focus{
+        @extend %inputbox-focus-#{$skin}-skin-#{$current-breakpoint};
+      }
+    }    
+  }
 }
 
 input[type="text"], input[type="password"], input[type="email"], textarea{
@@ -29,9 +30,4 @@ input[type="text"], input[type="password"], input[type="email"], textarea{
   width: 100%;
   line-height: normal;
   transition: all ease-in-out;
-}
-
-[role="inputbox"]{
-  @include input($inputbox-default-size, $inputbox-default-skin);
-
 }

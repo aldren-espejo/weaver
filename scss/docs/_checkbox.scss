@@ -1,0 +1,7 @@
+.chk-pof{
+	@include checkbox(small, rounded);
+
+	@include breakpoint(large){
+		@include checkbox($skin: default);
+	}
+}

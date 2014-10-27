@@ -1,16 +1,16 @@
-$button-bg: rgba(0,0,0,0);
-$button-color: #fff;
-$button-border: none;
+$transparent-button-bg: rgba(0,0,0,0) !default;
+$transparent-button-color: #fff !default;
+$transparent-button-border: none !default;
 
 @mixin components_button_skins_transparent($b){
 
-	%button-transparent-skin-{$b}{
-		background: $button-bg;
-		color: $button-color;
-		border: $button-border;
+	%button-transparent-skin-#{$b}{
+		background: $transparent-button-bg;
+		color: $transparent-button-color;
+		border: $transparent-button-border;
 	}
 
-	%button-hover-transparent-skin-{$b}{
+	%button-hover-transparent-skin-#{$b}{
 		background: rgba(0,0,0,0.5);
 	}	
 }

@@ -1,19 +1,29 @@
 .btn-sample1{
-	@include button(xsmall, cta);
+	@include button(xsmall, danger);
+
+
+	@include breakpoint(large){
+		@include button(xlarge, cta);
+	}
+
+	@include breakpoint(medium){
+		@include button($skin: warning);
+	}
 }
 
-.btn-sample2{
-	@include button(small, danger);
-}
+// .btn-sample2{
+// 	@include button(small, danger);
+// }
 
-.btn-sample3{
-	@include button(medium, warning);
-}
+// .btn-sample3{
+// 	@include button(medium, warning);
+// }
 
-.btn-sample4{
-	@include button(large, loud);
-}
+// .btn-sample4{
+// 	@include button(large, loud);
+// }
 
-.btn-sample5{
-	@include button(xlarge);
-}
+// .btn-sample5{
+// 	@include button(xlarge);
+// }
+

@@ -1,0 +1,7 @@
+.switch-pof{
+	@include switch(medium, rounded);
+
+	@include breakpoint(large){
+		@include switch(xsmall);
+	}
+}

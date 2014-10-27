@@ -1,16 +1,16 @@
-$button-bg: $danger-color;
-$button-color: #fff;
-$button-border: 1px solid darken($button-bg, 10%);
+$danger-button-bg: $danger-color !default;
+$danger-button-color: #fff !default;
+$danger-button-border: 1px solid darken($danger-button-bg, 10%) !default;
 
 @mixin components_button_skins_danger($b){
 
-	%button-danger-skin-{$b}{
-		background: $button-bg;
-		color: $button-color;
-		border: $button-border;
+	%button-danger-skin-#{$b}{
+		background: $danger-button-bg;
+		color: $danger-button-color;
+		border: $danger-button-border;
 	}
 
-	%button-hover-danger-skin-{$b}{
-		background: darken($button-bg, 10%);
+	%button-hover-danger-skin-#{$b}{
+		background: darken($danger-button-bg, 10%);
 	}	
 }

@@ -1,37 +1,37 @@
 // variables that control type text sizes
 
 h1{
-	@extend %e_font-size-xlarge;
-	@extend %e_font-family-bold;
+	@extend %e_font-size-xlarge-#{$current-breakpoint};
+	@extend %e_font-family-bold-#{$current-breakpoint};
 	margin: rem-calc(0 0 10);
 }
 
 h2{
-	@extend %e_font-size-large;
-	@extend %e_font-family-bold;
+	@extend %e_font-size-large-#{$current-breakpoint};
+	@extend %e_font-family-bold-#{$current-breakpoint};
 	margin: rem-calc(0 0 7);
 }
 
 h3{
-	@extend %e_font-size-medium;
-	@extend %e_font-family-bold;
+	@extend %e_font-size-medium-#{$current-breakpoint};
+	@extend %e_font-family-bold-#{$current-breakpoint};
 	margin: rem-calc(0 0 6);
 }
 
 h4{
-	@extend %e_font-size-small;
-	@extend %e_font-family-bold;
+	@extend %e_font-size-small-#{$current-breakpoint};
+	@extend %e_font-family-bold-#{$current-breakpoint};
 	margin: rem-calc(0 0 4);
 }
 
 h5,h6{
-	@extend %e_font-size-xsmall;
-	@extend %e_font-family-bold;
+	@extend %e_font-size-xsmall-#{$current-breakpoint};
+	@extend %e_font-family-bold-#{$current-breakpoint};
 	margin: rem-calc(0 0 2);
 }
 
 a{
-	@extend %e_font-family-regular;
+	@extend %e_font-family-regular-#{$current-breakpoint};
 	text-decoration: none;
 	color: $primary-color;
 	transition: all 200ms ease-out;
@@ -42,6 +42,6 @@ a{
 }
 
 p{
-	@extend %e_font-family-regular;
+	@extend %e_font-family-regular-#{$current-breakpoint};
 	line-height: rem-calc(24);
 }

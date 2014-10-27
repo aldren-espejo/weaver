@@ -1,6 +1,6 @@
 @mixin uitilities_extendables_list($b){
 
-	%e_list-style-type-none-{$b}{
+	%e_list-style-type-none-#{$b}{
 		list-style-type: none;
 	}
 }

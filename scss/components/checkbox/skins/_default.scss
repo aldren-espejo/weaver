@@ -1,18 +1,20 @@
-$checkbox-bg: #fff;
-$checkbox-border-color: #dedede;
-$checkbox-border-width: 1px;
-$checkbox-checked-bg: $primary-color;
+$default-checkbox-bg: #fff !default;
+$default-checkbox-border-color: #dedede !default;
+$default-checkbox-border-width: 1px !default;
+$default-checkbox-checked-bg: $primary-color !default;
 
 @mixin components_checkbox_skins_default($b){
 
-	%checkbox-default-skin-{$b}{
-		background-color: $checkbox-bg;
-		border: $checkbox-border-width solid $checkbox-border-color;
+	%checkbox-default-skin-#{$b}{
+		background-color: $default-checkbox-bg;
+		border: $default-checkbox-border-width solid $default-checkbox-border-color;
+		border-radius: 0;
 	}
 
-	%checkbox-checked-default-skin-{$b}{
-		background: $checkbox-checked-bg url(../images/check-icon.png) no-repeat center center;
+	%checkbox-checked-default-skin-#{$b}{
+		background: $default-checkbox-checked-bg url(../images/check-icon.png) no-repeat center center;
 		background-size: 70%;
 		border: none;
+		border-radius: 0;
 	}	
 }
