@@ -1,36 +1,42 @@
-@mixin icon($icon, $size:small, $position:left, $width:null, $height:null) {
+@mixin icon($icon, $size:small, $position:left, $width:null, $height:null, $animated: false) {
 	
 	
 	@if $position == left {
 		&:before{
-			@extend %e_icon-base;
-			@extend %e_icon-#{$icon};
-			@extend %e_icon-#{$size};
-			@extend %e_icon-position-left-or-right;
+			@extend %e_icon-base-#{$current-breakpoint};
+			@extend %e_icon-#{$icon}-#{$current-breakpoint};
+			@extend %e_icon-#{$size}-#{$current-breakpoint};
+			@extend %e_icon-position-left-or-right-#{$current-breakpoint};
 		}
 
 	} @else if $position == top {
 		&:before{
 			@extend %e_icon-base;
-			@extend %e_icon-#{$icon};
-			@extend %e_icon-#{$size};
+			@extend %e_icon-#{$icon}-#{$current-breakpoint};
+			@extend %e_icon-#{$size}-#{$current-breakpoint};
 			@extend %e_icon-position-top-or-bottom;
 		}
 
 	} @else if $position == right {
 		&:after{
-			@extend %e_icon-base;
-			@extend %e_icon-#{$icon};
-			@extend %e_icon-#{$size};
+			@extend %e_icon-base-#{$current-breakpoint};
+			@extend %e_icon-#{$icon}-#{$current-breakpoint};
+			@extend %e_icon-#{$size}-#{$current-breakpoint};
 			@extend %e_icon-position-left-or-right;
 		}
 
 	} @else if $position == bottom {
 		&:after{
-			@extend %e_icon-base;
-			@extend %e_icon-#{$icon};
-			@extend %e_icon-#{$size};
-			@extend %e_icon-position-top-or-bottom;
+			@extend %e_icon-base-#{$current-breakpoint};
+			@extend %e_icon-#{$icon}-#{$current-breakpoint};
+			@extend %e_icon-#{$size}-#{$current-breakpoint};
+			@extend %e_icon-position-top-or-bottom-#{$current-breakpoint};
+		}
+	}
+
+	@if $animated == true{
+		&:after, &:before{
+			@extend %e_animated-#{$current-breakpoint};
 		}
 	}
 }
