@@ -17,60 +17,63 @@ $drop-con-medium-size: 5px !default;
 $drop-con-large-size: 6px !default;
 $drop-con-xlarge-size: 7px !default;
 
-@include placeholder(dropdown-list-default-skin){
-	border: 1px solid $dropdown-list-border-color;
-}
+@mixin components_dropdown-list_skins_default($b){
 
-@include placeholder(dropdown-list-expanded-default-skin){
-	-webkit-box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
-	-moz-box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
-	box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
-	border-radius: $dropdown-list-border-radius;		
-}
+	%dropdown-list-default-skin-{$b}{
+		border: 1px solid $dropdown-list-border-color;
+	}
 
-@include placeholder(list-option-default-skin){
-	background: $list-option-bg;
-	color: $list-option-color;
-}
+	%dropdown-list-expanded-default-skin-{$b}{
+		-webkit-box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
+		-moz-box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
+		box-shadow: 0px 1px 1px 0px $dropdown-list-box-shadow;
+		border-radius: $dropdown-list-border-radius;		
+	}
 
-@include placeholder(list-option-active-default-skin){
-	background: $list-option-bg-active;
-	color: $list-option-color-active;
-}
+	%list-option-default-skin-{$b}{
+		background: $list-option-bg;
+		color: $list-option-color;
+	}
 
-@include placeholder(list-option-hover-default-skin){
-	background: $list-option-bg-hover;
-	color: $list-option-color-hover;
-}
+	%list-option-active-default-skin-{$b}{
+		background: $list-option-bg-active;
+		color: $list-option-color-active;
+	}
 
-@include placeholder(drop-icon-default-skin){
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-color: $drop-icon-bg transparent transparent transparent;	
-}
+	%list-option-hover-default-skin-{$b}{
+		background: $list-option-bg-hover;
+		color: $list-option-color-hover;
+	}
 
-@include placeholder(drop-icon-default-xsmall){
-	border-width: ($drop-con-xsmall-size + 1) $drop-con-xsmall-size 0 $drop-con-xsmall-size;
-	right:$drop-con-xsmall-size*2;
-}
+	%drop-icon-default-skin-{$b}{
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-color: $drop-icon-bg transparent transparent transparent;	
+	}
 
-@include placeholder(drop-icon-default-small){
-	border-width: ($drop-con-small-size + 1) $drop-con-small-size 0 $drop-con-small-size;
-	right:$drop-con-small-size *2;
-}
+	%drop-icon-default-xsmall-{$b}{
+		border-width: ($drop-con-xsmall-size + 1) $drop-con-xsmall-size 0 $drop-con-xsmall-size;
+		right:$drop-con-xsmall-size*2;
+	}
 
-@include placeholder(drop-icon-default-medium){
-	border-width: ($drop-con-medium-size + 1) $drop-con-medium-size 0 $drop-con-medium-size;
-	right:$drop-con-medium-size*2;
-}
+	%drop-icon-default-small-{$b}{
+		border-width: ($drop-con-small-size + 1) $drop-con-small-size 0 $drop-con-small-size;
+		right:$drop-con-small-size *2;
+	}
 
-@include placeholder(drop-icon-default-large){
-	border-width: ($drop-con-large-size + 1) $drop-con-large-size 0 $drop-con-large-size;
-	right:$drop-con-large-size *2;
-}
+	%drop-icon-default-medium-{$b}{
+		border-width: ($drop-con-medium-size + 1) $drop-con-medium-size 0 $drop-con-medium-size;
+		right:$drop-con-medium-size*2;
+	}
 
-@include placeholder(drop-icon-default-xlarge){
-	border-width: ($drop-con-xlarge-size + 1) $drop-con-xlarge-size 0 $drop-con-xlarge-size;
-	right:$drop-con-xlarge-size*2;
+	%drop-icon-default-large-{$b}{
+		border-width: ($drop-con-large-size + 1) $drop-con-large-size 0 $drop-con-large-size;
+		right:$drop-con-large-size *2;
+	}
+
+	%drop-icon-default-xlarge-{$b}{
+		border-width: ($drop-con-xlarge-size + 1) $drop-con-xlarge-size 0 $drop-con-xlarge-size;
+		right:$drop-con-xlarge-size*2;
+	}	
 }

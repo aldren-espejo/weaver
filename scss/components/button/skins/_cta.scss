@@ -2,12 +2,15 @@ $button-bg: $primary-color;
 $button-color: #fff;
 $button-border: 1px solid darken($button-bg, 10%);
 
-@include placeholder(button-cta-skin){
-	background: $button-bg;
-	color: $button-color;
-	border: $button-border;
-}
+@mixin components_button_skin_cta($b){
 
-@include placeholder(button-hover-cta-skin){
-	background: darken($button-bg, 10%);
+	%button-cta-skin-{$b}{
+		background: $button-bg;
+		color: $button-color;
+		border: $button-border;
+	}
+
+	%button-hover-cta-skin-{$b}{
+		background: darken($button-bg, 10%);
+	}	
 }

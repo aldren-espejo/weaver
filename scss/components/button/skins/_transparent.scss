@@ -2,12 +2,15 @@ $button-bg: rgba(0,0,0,0);
 $button-color: #fff;
 $button-border: none;
 
-@include placeholder(button-transparent-skin){
-	background: $button-bg;
-	color: $button-color;
-	border: $button-border;
-}
+@mixin components_button_skins_transparent($b){
 
-@include placeholder(button-hover-transparent-skin){
-	background: rgba(0,0,0,0.5);
+	%button-transparent-skin-{$b}{
+		background: $button-bg;
+		color: $button-color;
+		border: $button-border;
+	}
+
+	%button-hover-transparent-skin-{$b}{
+		background: rgba(0,0,0,0.5);
+	}	
 }

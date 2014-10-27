@@ -1,30 +1,21 @@
-@import "skins/default";
-@import "skins/cta";
-@import "skins/danger";
-@import "skins/warning";
-@import "skins/loud";
-@import "skins/transparent";
-@import "skins/ghost";
-
-
 // can be overwritten
 $button-default-skin: default !default;
 $button-default-size: small !default;
 
-@mixin button($size: null, $skin: null){
-	@extend %button-#{$skin}-skin;
-	@extend %e_padding-#{$size};
-	@extend %e_text-#{$size};
+@mixin button($size: null, $skin: null, $breakpoint: small){
+	@extend %button-#{$skin}-skin-{$breakpoint};
+	@extend %e_padding-#{$size}-{$breakpoint};
+	@extend %e_text-#{$size}-{$breakpoint};
 
 	&:hover{
-		@extend %button-hover-#{$skin}-skin;
+		@extend %button-hover-#{$skin}-skin-{$breakpoint};
 	}
 }
 
 button, [class^="btn-"], [class*=" btn-"]{
 	@include button($button-default-size, $button-default-skin);
-	@extend %e_display-inline-block;
-	@extend %e_text-align-center;
+	@extend %e_display-inline-block-{$breakpoint};
+	@extend %e_text-align-center-{$breakpoint};
 	cursor: pointer;
 	text-decoration: none;
 	-webkit-appearance: none;

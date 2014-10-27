@@ -1,23 +1,26 @@
-@include placeholder(e_text-align-center){
-	text-align: center;
-}
+@mixin utilities_extendables_text($b){
 
-@include placeholder(e_text-align-left){
-	text-align: left;
-}
+	%e_text-align-center-{$b}{
+		text-align: center;
+	}
 
-@include placeholder(e_text-align-right){
-	text-align: right;
-}
+	%e_text-align-left-{$b}{
+		text-align: left;
+	}
 
-@include placeholder(e_text-transform-uppercase){
-	text-transform: uppercase; 
-}
+	%e_text-align-right-{$b}{
+		text-align: right;
+	}
 
-@include placeholder(e_text-color-white){
-	color: #fff;
-}
+	%e_text-transform-uppercase-{$b}{
+		text-transform: uppercase; 
+	}
 
-@include placeholder(e_decoration-underline){
-	text-decoration: underline;
+	%e_text-color-white-{$b}{
+		color: #fff;
+	}
+
+	%e_decoration-underline-{$b}{
+		text-decoration: underline;
+	}	
 }

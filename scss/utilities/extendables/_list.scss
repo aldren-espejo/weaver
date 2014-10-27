@@ -1,3 +1,6 @@
-@include placeholder(e_list-style-type-none){
-	list-style-type: none;
+@mixin uitilities_extendables_list($b){
+
+	%e_list-style-type-none-{$b}{
+		list-style-type: none;
+	}
 }

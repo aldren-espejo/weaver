@@ -1,11 +1,14 @@
-@include placeholder(e_display-block){
-	display:block;
-}
+@mixin utitlities_extendables_display($b){
 
-@include placeholder(e_display-none){
-	display:none;
-}
+	%e_display-block-#{$b}{
+		display: block;
+	}
 
-@include placeholder(e_display-inline-block){
-	display:inline-block;
+	%e_display-none-#{$b}{
+		display: none;
+	}
+
+	%e_display-inline-block-#{$b}{
+		display: inline-block;
+	}	
 }

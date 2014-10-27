@@ -1,16 +1,19 @@
-@include placeholder(e_position-absolute){
-	position: absolute;
-}
+@mixin utilities_extendables_position($b){
 
-@include placeholder(e_position-relative){
-	position: relative;
-}
+	%e_position-absolute-{$b}{
+		position: absolute;
+	}
 
-@include placeholder(e_position-fixed){
-	position: fixed;
-}
+	%e_position-relative-{$b}{
+		position: relative;
+	}
 
-@include placeholder(e_center-vertical){
-	top: 50%;
-  	transform: translateY(-50%);
+	%e_position-fixed-{$b}{
+		position: fixed;
+	}
+
+	%e_center-vertical-{$b}{
+		top: 50%;
+	  	transform: translateY(-50%);
+	}	
 }

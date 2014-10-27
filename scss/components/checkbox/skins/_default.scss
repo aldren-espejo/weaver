@@ -3,13 +3,16 @@ $checkbox-border-color: #dedede;
 $checkbox-border-width: 1px;
 $checkbox-checked-bg: $primary-color;
 
-@include placeholder(checkbox-default-skin){
-	background-color: $checkbox-bg;
-	border: $checkbox-border-width solid $checkbox-border-color;
-}
+@mixin components_checkbox_skins_default($b){
 
-@include placeholder(checkbox-checked-default-skin){
-	background: $checkbox-checked-bg url(../images/check-icon.png) no-repeat center center;
-	background-size: 70%;
-	border: none;
+	%checkbox-default-skin-{$b}{
+		background-color: $checkbox-bg;
+		border: $checkbox-border-width solid $checkbox-border-color;
+	}
+
+	%checkbox-checked-default-skin-{$b}{
+		background: $checkbox-checked-bg url(../images/check-icon.png) no-repeat center center;
+		background-size: 70%;
+		border: none;
+	}	
 }

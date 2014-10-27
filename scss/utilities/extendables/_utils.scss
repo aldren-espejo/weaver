@@ -1,8 +1,11 @@
-@include placeholder(e_centered){
-	margin: 0 auto;
-	float: none !important;
-}
+@mixin utilities_extendables_utils($b){
 
-@include placeholder(e_rounded-right-side){
-	border-radius: 0 2px 2px 0;
+	%e_centered-{$b}{
+		margin: 0 auto;
+		float: none !important;
+	}
+
+	%e_rounded-right-side-{$b}{
+		border-radius: 0 2px 2px 0;
+	}	
 }

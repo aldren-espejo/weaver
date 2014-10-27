@@ -4,33 +4,36 @@
 $dropdown-list-default-skin: default !default;
 $dropdown-list-default-size: small !default;
 
-@include placeholder(dropdown-list-base){
-	list-style-type: none;
-	width: 100%;	
-}
+@mixin components_dropdown-list_dropdown-list($b){
 
-@include placeholder(dropdown-list-expanded){
-	@extend %e_position-relative;
-	z-index: 9999;
-}
+	%dropdown-list-base-{$b}{
+		list-style-type: none;
+		width: 100%;	
+	}
 
-@include placeholder(dropdown-list-option-base){
-	display: none;
-	padding-right: 30px;
-	cursor: pointer;
-	transition: background 200ms ease-out;
-}
+	%dropdown-list-expanded-{$b}{
+		@extend %e_position-relative;
+		z-index: 9999;
+	}
 
-@include placeholder(dropdown-list-option-show){
-	position: relative;
-	display: block;	
-}
+	%dropdown-list-option-base-{$b}{
+		display: none;
+		padding-right: 30px;
+		cursor: pointer;
+		transition: background 200ms ease-out;
+	}
 
-@include placeholder(drop-icon-base){
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	content: " ";	
+	%dropdown-list-option-show-{$b}{
+		position: relative;
+		display: block;	
+	}
+
+	%drop-icon-base-{$b}{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		content: " ";	
+	}	
 }
 
 

@@ -2,12 +2,15 @@ $button-bg: #444 !default;
 $button-color: #fff !default;
 $button-border: 1px solid darken($button-bg, 10%);
 
-@include placeholder(button-default-skin){
-	background: $button-bg;
-	color: $button-color;
-	border: $button-border;
-}
+@mixin components_button_skins_default($b){
 
-@include placeholder(button-hover-default-skin){
-	background: darken($button-bg, 10%);
+	%button-default-skin-{$b}{
+		background: $button-bg;
+		color: $button-color;
+		border: $button-border;
+	}
+
+	%button-hover-default-skin-{$b}{
+		background: darken($button-bg, 10%);
+	}	
 }

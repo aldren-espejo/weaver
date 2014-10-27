@@ -2,12 +2,15 @@ $button-bg: rgba(0,0,0,0);
 $button-color: #fff;
 $button-border: 1px solid #fff;
 
-@include placeholder(button-ghost-skin){
-	background: $button-bg;
-	color: $button-color;
-	border: $button-border;
-}
+@mixin components_button_skins_ghost($b){
 
-@include placeholder(button-hover-ghost-skin){
-	background: rgba(0,0,0,0.1);
+	%button-ghost-skin-{$b}{
+		background: $button-bg;
+		color: $button-color;
+		border: $button-border;
+	}
+
+	%button-hover-ghost-skin-{$b}{
+		background: rgba(0,0,0,0.1);
+	}	
 }

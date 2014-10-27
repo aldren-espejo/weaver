@@ -4,15 +4,18 @@ $checkbox-border-width: 1px;
 $checkbox-checked-bg: $primary-color;
 $checkbox-radius: rem-calc(50);
 
-@include placeholder(checkbox-rounded-skin){
-	background-color: $checkbox-bg;
-	border: $checkbox-border-width solid $checkbox-border-color;
-	border-radius: $checkbox-radius;
-}
+@mixin components_checkbox_skins_rounded($b){
 
-@include placeholder(checkbox-checked-rounded-skin){
-	background: $checkbox-checked-bg url(../images/check-icon.png) no-repeat center center;
-	background-size: 70%;
-	border: none;
-	border-radius: $checkbox-radius;
+	%checkbox-rounded-skin-{$b}{
+		background-color: $checkbox-bg;
+		border: $checkbox-border-width solid $checkbox-border-color;
+		border-radius: $checkbox-radius;
+	}
+
+	%checkbox-checked-rounded-skin-{$b}{
+		background: $checkbox-checked-bg url(../images/check-icon.png) no-repeat center center;
+		background-size: 70%;
+		border: none;
+		border-radius: $checkbox-radius;
+	}	
 }

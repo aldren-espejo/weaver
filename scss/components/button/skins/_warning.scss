@@ -2,12 +2,15 @@ $button-bg: $warning-color;
 $button-color: #fff;
 $button-border: 1px solid darken($button-bg, 10%);
 
-@include placeholder(button-warning-skin){
-	background: $button-bg;
-	color: $button-color;
-	border: $button-border;
-}
+@mixin components_button_skin_warning($b){
 
-@include placeholder(button-hover-warning-skin){
-	background: darken($button-bg, 10%);
+	%button-warning-skin-{$b}{
+		background: $button-bg;
+		color: $button-color;
+		border: $button-border;
+	}
+
+	%button-hover-warning-skin-{$b}{
+		background: darken($button-bg, 10%);
+	}	
 }

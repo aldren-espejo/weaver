@@ -1,42 +1,43 @@
-@import "../../global-vars";
+@mixin utitlities_extendables_field($b){
 
-@include placeholder(e_padding-xsmall){
-	padding: $field-padding-xsmall;
-}
+	%e_padding-xsmall-#{$b}{
+		padding: $field-padding-xsmall;
+	}
 
-@include placeholder(e_padding-small){
-	padding: $field-padding-small;
-}
+	%e_padding-small-#{$b}{
+		padding: $field-padding-small;
+	}
 
-@include placeholder(e_padding-medium){
-	padding: $field-padding-medium;
-}
+	%e_padding-medium-#{$b}{
+		padding: $field-padding-medium;
+	}
 
-@include placeholder(e_padding-large){
-	padding: $field-padding-large;
-}
+	%e_padding-large-#{$b}{
+		padding: $field-padding-large;
+	}
 
-@include placeholder(e_padding-xlarge){
-	padding: $field-padding-xlarge;
-}
+	%e_padding-xlarge-#{$b}{
+		padding: $field-padding-xlarge;
+	}
 
 
-@include placeholder(e_text-xsmall){
-	font-size: $field-text-xsmall;
-}
+	%e_text-xsmall-#{$b}{
+		font-size: $field-text-xsmall;
+	}
 
-@include placeholder(e_text-small){
-	font-size: $field-text-small;
-}
+	%e_text-small-#{$b}{
+		font-size: $field-text-small;
+	}
 
-@include placeholder(e_text-medium){
-	font-size: $field-text-medium;
-}
+	%e_text-medium-#{$b}{
+		font-size: $field-text-medium;
+	}
 
-@include placeholder(e_text-large){
-	font-size: $field-text-large;
-}
+	%e_text-large-#{$b}{
+		font-size: $field-text-large;
+	}
 
-@include placeholder(e_text-xlarge){
-	font-size: $field-text-xlarge;
+	%e_text-xlarge-#{$b}{
+		font-size: $field-text-xlarge;
+	}	
 }
