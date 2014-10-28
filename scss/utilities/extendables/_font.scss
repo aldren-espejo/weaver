@@ -1,5 +1,9 @@
 @mixin utilities_extendables_font($b){
 
+	%e_font-size-tiny-#{$b}{
+		font-size: rem-calc($type-text-tiny);
+	}
+
 	%e_font-size-xsmall-#{$b}{
 		font-size: rem-calc($type-text-xsmall);
 	}
@@ -18,6 +22,10 @@
 
 	%e_font-size-xlarge-#{$b}{
 		font-size: rem-calc($type-text-xlarge);
+	}
+
+	%e_font-size-big-#{$b}{
+		font-size: rem-calc($type-text-big);
 	}
 
 	%e_font-size-huge-#{$b}{

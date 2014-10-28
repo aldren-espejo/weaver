@@ -15,5 +15,10 @@
 	%e_center-vertical-#{$b}{
 		top: 50%;
 	  	transform: translateY(-50%);
-	}	
+	}
+
+	%e_center-horizontal-#{$b}{
+		left: 50%;
+	  	transform: translateX(-50%);
+	}
 }

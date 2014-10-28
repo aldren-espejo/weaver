@@ -153,22 +153,22 @@ button, [class^="btn-"], [class*=" btn-"], [role="checkbox"] input + label, [rol
   display: inline-block; }
 
 h5, h6 {
-  font-size: 0.7857142857rem; }
-
-h4 {
   font-size: 1rem; }
 
-h3 {
+h4 {
   font-size: 1.2857142857rem; }
 
+h3 {
+  font-size: 1.8571428571rem; }
+
 h2 {
-  font-size: 1.7142857143rem; }
+  font-size: 2.5714285714rem; }
 
 h1 {
-  font-size: 2.2857142857rem; }
+  font-size: 3.2857142857rem; }
 
 a, p {
-  font-family: "montserrat_regular"; }
+  font-family: "Arial"; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "montserrat_bold"; }
