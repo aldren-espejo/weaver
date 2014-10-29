@@ -61,12 +61,41 @@
   %e_icon-linkedin-#{$b}{
     content: '\e809'; 
   }
-  %e_icon-dribbble-#{$b}{
-    content: '\e80a'; 
+  %e_icon-marker-#{$b}{
+    content: '\e80d'; 
   }
+  %e_icon-map-#{$b}{
+    content: '\e80c'; 
+  }
+  %e_icon-right-#{$b}{
+    content: '\e80e'; 
+  }
+  %e_icon-search-#{$b}{
+   content: '\e80f'; 
+  }
+  %e_icon-cancel-circled2-#{$b}{
+   content: '\e810'; 
+  }
+  %e_icon-twitter-circled-#{$b}{
+    content: '\e811';
+  }
+  %e_icon-facebook-circled-#{$b}{
+    content: '\e812';
+  }
+  %e_icon-instagram-circled-#{$b}{
+    content: '\e813';
+  }
+  %e_icon-gplus-circled-#{$b}{
+    content: '\e814';
+  }
+
   %e_icon-spin5-#{$b}{
    content: '\e80b'; 
    @extend %e_animated-#{$current-breakpoint};
+  }
+
+  %e_icon-dribbble-#{$b}{
+  content: '\e80a'; 
   }
 
   %e_icon-tiny-#{$b}{

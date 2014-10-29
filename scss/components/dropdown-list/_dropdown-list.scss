@@ -7,8 +7,12 @@
 	}
 
 	%dropdown-list-expanded-#{$b}{
-		@extend %e_position-relative-#{$b};
+		@extend %e_position-absolute-#{$b};
 		z-index: 9999;
+	}
+
+	%dropdown-list-position-above-#{$b}{
+		bottom: 0;
 	}
 
 	%dropdown-list-option-base-#{$b}{
@@ -50,6 +54,10 @@
 			&.in-active-state{
 				@extend %dropdown-list-expanded-#{$skin}-skin-#{$current-breakpoint};			
 			}
+
+			&.position-above{
+				@extend %dropdown-list-position-above-#{$skin}-skin-#{$current-breakpoint};				
+			}
 		}
 
 		li{
@@ -80,6 +88,10 @@
 
 		&.in-active-state{
 			@extend %dropdown-list-expanded-#{$current-breakpoint};		
+		}
+
+		&.position-above{
+			@extend %dropdown-list-position-above-#{$current-breakpoint};
 		}
 	}
 

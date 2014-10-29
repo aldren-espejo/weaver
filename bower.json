@@ -3,7 +3,7 @@
   "dependencies": {
     "sass-list-maps": "~1.0.0",
     "normalize.css": "~3.0.2",
-    "jquery": "~2.1.1",
+    "jquery": "1.11.1",
     "modernizr": "~2.8.3"
   },
   "version": "0.1.3",

@@ -43,6 +43,10 @@
     expand: function(){
       var self = this;
       self.$list.toggleClass('in-active-state');
+
+      if((self.$list.outerHeight() + self.$list.offset().top) > $(window).height()){
+        self.$list.toggleClass('position-above');
+      }
     },
 
     hideOthers: function(){
@@ -50,7 +54,7 @@
 
       // hide other dropdown list execept this one
       $('.select.in-active-state').not(self.$list).each(function(){
-        $(this).removeClass('in-active-state');
+        $(this).removeClass('in-active-state position-above');
       });
     },
 
