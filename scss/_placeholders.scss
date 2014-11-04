@@ -27,6 +27,9 @@
 @include components_switch_switch(root);
 @include components_switch_skins_default(root);
 @include components_switch_skins_rounded(root);
+@include components_label_base(root);
+@include components_label_sizes(root);
+@include components_label_skin_default(root);
 
 @each $breakpoint in $breakpoints{
 	$name: map-keys($breakpoint);
@@ -61,6 +64,10 @@
 
 		@include components_switch_switch($name);
 		@include components_switch_skins_default($name);
-		@include components_switch_skins_rounded($name);			
+		@include components_switch_skins_rounded($name);
+		
+		@include components_label_base($name);
+		@include components_label_skin_default($name);
+		@include components_label_sizes($name);		
 	}
 }

@@ -1,16 +1,33 @@
-@mixin button($size: null, $skin: null){
+@mixin button($size: null, $skin: null, $radius: null){
 	
-	@if $skin {
-		@extend %button-#{$skin}-skin-#{$current-breakpoint};
+	@if $skin  {
 
-		&:hover{
-			@extend %button-hover-#{$skin}-skin-#{$current-breakpoint};
-		}		
+		@if type-of($skin) == color{
+			
+			color: contrast($skin);
+			background-color: $skin;
+
+			&:hover{
+				background-color: darken($skin, 10%);
+			}
+
+		} @else {
+
+			@extend %button-#{$skin}-skin-#{$current-breakpoint};
+
+			&:hover{
+				@extend %button-hover-#{$skin}-skin-#{$current-breakpoint};
+			}
+		}
 	}
 
 	@if $size {
 		@extend %e_padding-#{$size}-#{$current-breakpoint};
 		@extend %e_text-#{$size}-#{$current-breakpoint};		
+	}
+
+	@if $radius {
+		border-radius: $radius;
 	}
 }
 

@@ -1,0 +1,91 @@
+$label-padding-xsmall: rem-calc(3 5) !default;
+$label-padding-small: rem-calc(5 7) !default;
+$label-padding-medium: rem-calc(7 9) !default;
+$label-padding-large: rem-calc(9 11) !default;
+$label-padding-xlarge: rem-calc(11 13) !default;
+$label-text-xsmall: rem-calc(9) !default;
+$label-text-small: rem-calc(12) !default;
+$label-text-medium: rem-calc(14) !default;
+$label-text-large: rem-calc(16) !default;
+$label-text-xlarge: rem-calc(18) !default;
+$label-text-uppercase: true !default;
+
+@mixin components_label_base($b){
+	%label-base-#{$b}{
+		letter-spacing: 1px;
+		
+		@if $label-text-uppercase {
+			text-transform: uppercase;
+		}
+	}
+}
+
+@mixin components_label_sizes($b){
+
+	%label-xsmall-#{$b}{
+		padding: $label-padding-xsmall;
+	}
+
+	%label-small-#{$b}{
+		padding: $label-padding-small;
+	}
+
+	%label-medium-#{$b}{
+		padding: $label-padding-medium;
+	}
+
+	%label-large-#{$b}{
+		padding: $label-padding-large;
+	}
+
+	%label-xlarge-#{$b}{
+		padding: $label-padding-xlarge;
+	}
+
+	%label-text-xsmall-#{$b}{
+		font-size: $label-text-xsmall;
+	}
+
+	%label-text-small-#{$b}{
+		font-size: $label-text-small;
+	}
+
+	%label-text-medium-#{$b}{
+		font-size: $label-text-medium;
+	}
+
+	%label-text-large-#{$b}{
+		font-size: $label-text-large;
+	}
+
+	%label-text-xlarge-#{$b}{
+		font-size: $label-text-xlarge;
+	}	
+}
+
+@mixin label($size: null, $skin: null, $radius: null){
+
+	@extend %label-base-#{$current-breakpoint};
+	
+	@if $skin  {
+
+		@if type-of($skin) == color{
+			
+			color: contrast($skin);
+			background-color: $skin;
+
+		} @else {
+
+			@extend %label-#{$skin}-skin-#{$current-breakpoint};
+		}
+	}
+
+	@if $size {
+		@extend %label-#{$size}-#{$current-breakpoint};
+		@extend %label-text-#{$size}-#{$current-breakpoint};		
+	}
+
+	@if $radius {
+		border-radius: $radius;
+	}
+}

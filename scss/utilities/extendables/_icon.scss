@@ -88,6 +88,18 @@
   %e_icon-gplus-circled-#{$b}{
     content: '\e814';
   }
+  %e_icon-right-dir-#{$b}{
+    content: '\e815';
+  }
+  %e_icon-left-dir-#{$b}{
+    content: '\e816';
+  }
+  %e_icon-down-dir-#{$b}{
+    content: '\e817';
+  }
+  %e_icon-up-dir-#{$b}{
+    content: '\e818';
+  }
 
   %e_icon-spin5-#{$b}{
    content: '\e80b'; 

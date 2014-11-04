@@ -1,0 +1,12 @@
+$default-label-bg: #444 !default;
+$default-label-color: #fff !default;
+$default-label-border: 1px solid darken($default-label-bg, 10%) !default;
+
+@mixin components_label_skin_default($b){
+
+	%label-default-skin-#{$b}{
+		background: $default-label-bg;
+		color: $default-label-color;
+		border: $default-label-border;
+	}
+}

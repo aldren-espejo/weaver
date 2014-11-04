@@ -3,6 +3,7 @@
 @import "fonts";
 @import "utilities/functions/rem";
 @import "utilities/functions/range";
+@import "utilities/functions/contrast";
 @import "global-vars";
 @import "utilities/extendables/display";
 @import "utilities/extendables/field";
@@ -33,6 +34,8 @@
 @import "components/switch/skins/default";
 @import "components/switch/skins/rounded";
 @import "components/type/type";
+@import "components/label/label";
+@import "components/label/skins/default";
 
 @import "placeholders";
 @import "utilities/helpers/breakpoint";
